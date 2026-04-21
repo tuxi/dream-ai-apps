@@ -1,15 +1,19 @@
-# Dream AI 官网后台管理系统前端需求文档
+# Dream AI 官网内容后台前端需求文档
 
 ## 1. 文档目的
 
-本文档用于明确当前官网项目 `apps/site-web` 的后台管理系统前端需求边界，作为后续 UI 设计、页面开发、联调验收的统一依据。
+本文档用于明确当前官网项目 `apps/site-web` 的官网内容后台前端需求边界，作为后续 UI 设计、页面开发、联调验收的统一依据。
 
 本次需求分析基于以下事实：
 
 - 当前官网项目为 `Next.js 14 + React 18 + TypeScript + TailwindCSS`
 - 服务端只读参考位于 `server-readonly/dream-ai`
-- 本次前端后台开发以 `internal/router/router.go` 中 `adminGroup` 已存在的站点管理接口为主
+- 本文档只聚焦 `adminGroup` 中的 `site/*` 内容管理接口
 - `server-readonly` 仅作 API 和业务参考，不允许修改其中实现
+
+总后台层面的完整规划，另见：
+
+- [admin-system-requirements.md](/Users/xiaoyuan/Documents/work/git/dream-ai-apps/docs/admin-system-requirements.md)
 
 ---
 
@@ -82,18 +86,21 @@ apps/site-web/
 - `GET /api/v1/admin/site/features`
 - `POST /api/v1/admin/site/features`
 - `PUT /api/v1/admin/site/features/:id`
+- `DELETE /api/v1/admin/site/features/:id`
 
 ### 4.3 FAQ
 
 - `GET /api/v1/admin/site/faqs`
 - `POST /api/v1/admin/site/faqs`
 - `PUT /api/v1/admin/site/faqs/:id`
+- `DELETE /api/v1/admin/site/faqs/:id`
 
 ### 4.4 文章 Posts
 
 - `GET /api/v1/admin/site/posts`
 - `POST /api/v1/admin/site/posts`
 - `PUT /api/v1/admin/site/posts/:id`
+- `DELETE /api/v1/admin/site/posts/:id`
 
 支持查询参数：
 
@@ -106,8 +113,26 @@ apps/site-web/
 - `GET /api/v1/admin/site/download-links`
 - `POST /api/v1/admin/site/download-links`
 - `PUT /api/v1/admin/site/download-links/:id`
+- `DELETE /api/v1/admin/site/download-links/:id`
 
-### 4.6 权限要求
+### 4.6 后台媒体上传能力
+
+- `GET /api/v1/admin/media/sts`
+
+当前返回字段包括：
+
+- `access_key_id`
+- `access_key_secret`
+- `security_token`
+- `expiration`
+- `bucket`
+- `region`
+- `endpoint`
+- `host`
+- `dir`
+- `user_id`
+
+### 4.7 权限要求
 
 所有 `/api/v1/admin/*` 接口均在：
 
@@ -254,6 +279,28 @@ apps/site-web/
 - `platform` 必填
 - `title` 必填
 - `url` 必填
+- `is_enabled`
+- `sort`
+
+业务规则：
+
+- 前台只展示 `is_enabled = true` 的下载链接
+- 后台列表返回全部下载链接
+- 排序按 `sort asc, id asc`
+
+## 5.7 删除与上传联调说明
+
+当前前端不应再把 Site CMS 当成“只有 create / update”的半成品接口集，现状已经支持完整运营闭环：
+
+- `features / faqs / posts / download-links` 均支持 delete
+- 站点资源上传可以通过 `/api/v1/admin/media/sts` 获取后台专用 STS
+
+前端注意：
+
+- delete 是危险操作，必须统一二次确认
+- delete 成功后建议直接刷新列表或本地移除记录
+- 上传目录前缀以后端返回的 `dir` 为准，不要在前端写死
+- 当前是“后台专用 STS”，不是独立媒体中心，因此上传后的资源管理仍由具体业务模块负责
 - `is_enabled`
 - `sort`
 
@@ -745,4 +792,3 @@ src/
 1. 先完成后台专属 layout 和导航骨架
 2. 再将现有 `site-admin-panel` 拆分为模块化页面
 3. 最后补齐状态筛选、时间选择、表单校验与交互反馈
-

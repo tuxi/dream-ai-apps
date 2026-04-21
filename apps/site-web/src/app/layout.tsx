@@ -3,7 +3,7 @@ import type { ReactNode } from "react"
 
 import "./globals.css"
 
-import { SiteShell } from "@/components/layout/site-shell"
+import { AppFrame } from "@/components/layout/app-frame"
 import { getSiteConfig } from "@/lib/api/site"
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,7 +24,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SiteShell config={config}>{children}</SiteShell>
+        <AppFrame config={config}>{children}</AppFrame>
       </body>
     </html>
   )

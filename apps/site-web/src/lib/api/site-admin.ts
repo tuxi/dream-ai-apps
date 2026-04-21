@@ -111,6 +111,13 @@ export function updateAdminSiteFeature(token: string, id: number, body: SiteFeat
   })
 }
 
+export function deleteAdminSiteFeature(token: string, id: number) {
+  return request<Record<string, never>>(`/admin/site/features/${id}`, {
+    method: "DELETE",
+    token,
+  })
+}
+
 export function getAdminSiteFaqs(token: string) {
   return request<SiteFaq[]>("/admin/site/faqs", { method: "GET", token })
 }
@@ -131,8 +138,29 @@ export function updateAdminSiteFaq(token: string, id: number, body: SiteFaqPaylo
   })
 }
 
-export function getAdminSitePosts(token: string) {
-  return request<SitePostList>("/admin/site/posts?page=1&page_size=50", { method: "GET", token })
+export function deleteAdminSiteFaq(token: string, id: number) {
+  return request<Record<string, never>>(`/admin/site/faqs/${id}`, {
+    method: "DELETE",
+    token,
+  })
+}
+
+export function getAdminSitePosts(
+  token: string,
+  params: {
+    page?: number
+    page_size?: number
+    status?: string
+  } = {},
+) {
+  const search = new URLSearchParams()
+  search.set("page", String(params.page ?? 1))
+  search.set("page_size", String(params.page_size ?? 50))
+  if (params.status) {
+    search.set("status", params.status)
+  }
+
+  return request<SitePostList>(`/admin/site/posts?${search.toString()}`, { method: "GET", token })
 }
 
 export function createAdminSitePost(token: string, body: SitePostPayload) {
@@ -148,6 +176,13 @@ export function updateAdminSitePost(token: string, id: number, body: SitePostPay
     method: "PUT",
     token,
     body: JSON.stringify(body),
+  })
+}
+
+export function deleteAdminSitePost(token: string, id: number) {
+  return request<Record<string, never>>(`/admin/site/posts/${id}`, {
+    method: "DELETE",
+    token,
   })
 }
 
@@ -168,5 +203,12 @@ export function updateAdminSiteDownloadLink(token: string, id: number, body: Sit
     method: "PUT",
     token,
     body: JSON.stringify(body),
+  })
+}
+
+export function deleteAdminSiteDownloadLink(token: string, id: number) {
+  return request<Record<string, never>>(`/admin/site/download-links/${id}`, {
+    method: "DELETE",
+    token,
   })
 }

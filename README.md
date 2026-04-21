@@ -74,7 +74,9 @@ dream-ai-apps/
 
 本仓库当前推荐优先查看以下文档：
 
-- [后台管理系统前端需求文档](docs/admin-frontend-requirements.md)
+- [官网内容后台前端需求文档](docs/admin-frontend-requirements.md)
+- [总后台系统前端需求文档](docs/admin-system-requirements.md)
+- [Admin 后端缺口需求清单](docs/admin-backend-gap-requirements.md)
 
 如果后续继续补充架构说明、联调说明、页面设计稿映射，也统一放在 [docs](/Users/xiaoyuan/Documents/work/git/dream-ai-apps/docs) 目录下。
 
