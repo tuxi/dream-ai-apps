@@ -10,31 +10,14 @@ type ApiEnvelope<T> = {
   data: T
 }
 
-type AdminAuthTokenResponse = {
-  access_token: string
-  refresh_token: string
-  access_exp: number
-  refresh_exp: number
-  user_id: number
-  role: number
-  nickname?: string
-  avatar_url?: string
-  permissions?: string[]
-}
+type AdminAuthTokenResponse = Record<string, unknown>
 
 type AdminSendLoginCodeResponse = {
   success: boolean
   message?: string
 }
 
-type AdminSessionResponse = {
-  user_id: number
-  role: number
-  nickname?: string
-  avatar_url?: string
-  permissions?: string[]
-  session_expired_at?: number
-}
+type AdminSessionResponse = Record<string, unknown>
 
 async function request<T>(path: string, options: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE_URL}${path}`, {
@@ -46,25 +29,56 @@ async function request<T>(path: string, options: RequestInit): Promise<T> {
     },
   })
 
-  const payload = (await response.json()) as ApiEnvelope<T>
-  if (!response.ok || payload.code !== 0) {
-    throw new Error(payload.msg || `Request failed: ${response.status}`)
+  const rawText = await response.text()
+  const payload = rawText ? (JSON.parse(rawText) as ApiEnvelope<T>) : null
+  if (!response.ok || (payload && payload.code !== 0)) {
+    throw new Error(payload?.msg || `Request failed: ${response.status}`)
   }
 
-  return payload.data
+  return (payload?.data ?? ({} as T)) as T
+}
+
+function readString(payload: Record<string, unknown>, ...keys: string[]) {
+  for (const key of keys) {
+    const value = payload[key]
+    if (typeof value === "string" && value.trim()) {
+      return value
+    }
+  }
+  return ""
+}
+
+function readNumber(payload: Record<string, unknown>, ...keys: string[]) {
+  for (const key of keys) {
+    const value = payload[key]
+    if (typeof value === "number" && Number.isFinite(value)) {
+      return value
+    }
+  }
+  return 0
+}
+
+function readStringArray(payload: Record<string, unknown>, ...keys: string[]) {
+  for (const key of keys) {
+    const value = payload[key]
+    if (Array.isArray(value)) {
+      return value.filter((item): item is string => typeof item === "string")
+    }
+  }
+  return undefined
 }
 
 function toAdminSession(payload: AdminAuthTokenResponse): AdminSession {
   return {
-    accessToken: payload.access_token,
-    refreshToken: payload.refresh_token,
-    accessExp: payload.access_exp,
-    refreshExp: payload.refresh_exp,
-    userId: payload.user_id,
-    role: payload.role,
-    nickname: payload.nickname,
-    avatarUrl: payload.avatar_url,
-    permissions: payload.permissions,
+    accessToken: readString(payload, "access_token", "accessToken"),
+    refreshToken: readString(payload, "refresh_token", "refreshToken"),
+    accessExp: readNumber(payload, "access_exp", "accessExp"),
+    refreshExp: readNumber(payload, "refresh_exp", "refreshExp"),
+    userId: readNumber(payload, "user_id", "userId"),
+    role: readNumber(payload, "role"),
+    nickname: readString(payload, "nickname"),
+    avatarUrl: readString(payload, "avatar_url", "avatarUrl"),
+    permissions: readStringArray(payload, "permissions"),
   }
 }
 
@@ -109,6 +123,18 @@ export function getAdminSession(token: string) {
       Authorization: `Bearer ${token}`,
     },
   })
+}
+
+export function mergeAdminSession(current: AdminSession, payload: AdminSessionResponse) {
+  return {
+    ...current,
+    userId: readNumber(payload, "user_id", "userId") || current.userId,
+    role: readNumber(payload, "role") || current.role,
+    nickname: readString(payload, "nickname") || current.nickname,
+    avatarUrl: readString(payload, "avatar_url", "avatarUrl") || current.avatarUrl,
+    permissions: readStringArray(payload, "permissions") || current.permissions,
+    sessionExpiredAt: readNumber(payload, "session_expired_at", "sessionExpiredAt") || current.sessionExpiredAt,
+  }
 }
 
 export function logoutAdminSession(token: string) {

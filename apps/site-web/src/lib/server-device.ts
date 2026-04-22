@@ -19,6 +19,6 @@ export async function getServerDeviceHeaders() {
     "X-Device-Type": "web",
     "X-App-Version": WEB_APP_VERSION,
     "X-Device-Name": profile.deviceName,
-    "X-OS_Version": profile.osVersion,
+    "X-OS-Version": profile.osVersion,
   }
 }

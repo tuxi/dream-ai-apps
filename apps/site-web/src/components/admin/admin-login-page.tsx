@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 
 import { AdminField, AdminSectionCard } from "@/components/admin/admin-form-controls"
-import { getAdminSession, loginAdmin, loginAdminByCode, sendAdminLoginCode } from "@/lib/api/admin-auth"
+import { getAdminSession, loginAdmin, loginAdminByCode, mergeAdminSession, sendAdminLoginCode } from "@/lib/api/admin-auth"
 import { type AdminSession, useAdminToken } from "@/components/admin/use-admin-token"
 
 const ADMIN_ROLE = 5090
@@ -26,6 +26,7 @@ export function AdminLoginPage() {
   const [message, setMessage] = useState("")
   const [error, setError] = useState("")
   const [isPending, startTransition] = useTransition()
+  const adminHomePath = "/admin/site"
 
   useEffect(() => {
     if (!ready) {
@@ -46,21 +47,13 @@ export function AdminLoginPage() {
           return
         }
 
-        updateSession({
-          ...session,
-          userId: currentSession.user_id,
-          role: currentSession.role,
-          nickname: currentSession.nickname,
-          avatarUrl: currentSession.avatar_url,
-          permissions: currentSession.permissions,
-          sessionExpiredAt: currentSession.session_expired_at,
-        })
-        router.replace("/admin")
+        updateSession(mergeAdminSession(session, currentSession))
+        router.replace(adminHomePath)
       } catch {
         clearSession()
       }
     })
-  }, [clearSession, ready, router, session, token, updateSession])
+  }, [adminHomePath, clearSession, ready, router, session, token, updateSession])
 
   useEffect(() => {
     if (cooldown <= 0) {
@@ -78,8 +71,7 @@ export function AdminLoginPage() {
     persistSession(nextSession)
     setMessage("登录成功，正在进入后台…")
     setError("")
-    router.replace("/admin")
-    router.refresh()
+    router.replace(adminHomePath)
   }
 
   function submitPasswordLogin() {

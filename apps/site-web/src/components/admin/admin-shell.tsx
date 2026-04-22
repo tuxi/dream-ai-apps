@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, useTransition } from "react"
 import { usePathname, useRouter } from "next/navigation"
 
 import { AdminNav } from "@/components/admin/admin-nav"
-import { getAdminSession, logoutAdminSession, refreshAdminSession } from "@/lib/api/admin-auth"
+import { getAdminSession, logoutAdminSession, mergeAdminSession, refreshAdminSession } from "@/lib/api/admin-auth"
 import { useAdminToken } from "@/components/admin/use-admin-token"
 
 export function AdminShell({ children }: { children: ReactNode }) {
@@ -48,15 +48,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
       try {
         const currentSession = await getAdminSession(accessToken)
         if (session) {
-          updateSession({
-            ...session,
-            userId: currentSession.user_id,
-            role: currentSession.role,
-            nickname: currentSession.nickname,
-            avatarUrl: currentSession.avatar_url,
-            permissions: currentSession.permissions,
-            sessionExpiredAt: currentSession.session_expired_at,
-          })
+          updateSession(mergeAdminSession(session, currentSession))
         }
         setIsBootstrapping(false)
       } catch {
@@ -78,16 +70,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
           })
 
           const currentSession = await getAdminSession(refreshedSession.accessToken)
-          updateSession({
-            ...session,
-            ...refreshedSession,
-            userId: currentSession.user_id,
-            role: currentSession.role,
-            nickname: currentSession.nickname || refreshedSession.nickname,
-            avatarUrl: currentSession.avatar_url || refreshedSession.avatarUrl,
-            permissions: currentSession.permissions || refreshedSession.permissions,
-            sessionExpiredAt: currentSession.session_expired_at,
-          })
+          updateSession(mergeAdminSession({ ...session, ...refreshedSession }, currentSession))
           setIsBootstrapping(false)
           router.refresh()
         } catch {
@@ -132,7 +115,11 @@ export function AdminShell({ children }: { children: ReactNode }) {
   }
 
   if (!token.trim()) {
-    return null
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[linear-gradient(180deg,#eef4ff_0%,#f8fbff_48%,#ffffff_100%)]">
+        <div className="rounded-[1.5rem] border border-line bg-white px-6 py-5 text-sm text-slate-600 shadow-soft">正在跳转到管理员登录页…</div>
+      </div>
+    )
   }
 
   if (isBootstrapping || isPending) {

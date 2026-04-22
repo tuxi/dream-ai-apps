@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 const ADMIN_TOKEN_STORAGE_KEY = "dreamai-admin-token"
 const ADMIN_SESSION_STORAGE_KEY = "dreamai-admin-session"
 const ADMIN_ROLE = 5090
+const ADMIN_SESSION_CHANGE_EVENT = "dreamai-admin-session-change"
 
 export type AdminSession = {
   accessToken: string
@@ -25,28 +26,52 @@ export function useAdminToken() {
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
-    const rawSession = window.localStorage.getItem(ADMIN_SESSION_STORAGE_KEY)
+    function syncFromStorage() {
+      const rawSession = window.localStorage.getItem(ADMIN_SESSION_STORAGE_KEY)
 
-    if (rawSession) {
-      try {
-        const parsed = JSON.parse(rawSession) as AdminSession
-        if (parsed.accessToken) {
-          setSession(parsed)
-          setToken(parsed.accessToken)
-          setReady(true)
-          return
+      if (rawSession) {
+        try {
+          const parsed = JSON.parse(rawSession) as AdminSession
+          if (parsed.accessToken) {
+            setSession(parsed)
+            setToken(parsed.accessToken)
+            setReady(true)
+            return
+          }
+        } catch {
+          window.localStorage.removeItem(ADMIN_SESSION_STORAGE_KEY)
         }
-      } catch {
-        window.localStorage.removeItem(ADMIN_SESSION_STORAGE_KEY)
+      }
+
+      const savedToken = window.localStorage.getItem(ADMIN_TOKEN_STORAGE_KEY)
+      setSession(null)
+      setToken(savedToken || "")
+      setReady(true)
+    }
+
+    function handleStorage(event: StorageEvent) {
+      if (!event.key || event.key === ADMIN_SESSION_STORAGE_KEY || event.key === ADMIN_TOKEN_STORAGE_KEY) {
+        syncFromStorage()
       }
     }
 
-    const savedToken = window.localStorage.getItem(ADMIN_TOKEN_STORAGE_KEY)
-    if (savedToken) {
-      setToken(savedToken)
+    function handleSessionChange() {
+      syncFromStorage()
     }
-    setReady(true)
+
+    syncFromStorage()
+    window.addEventListener("storage", handleStorage)
+    window.addEventListener(ADMIN_SESSION_CHANGE_EVENT, handleSessionChange)
+
+    return () => {
+      window.removeEventListener("storage", handleStorage)
+      window.removeEventListener(ADMIN_SESSION_CHANGE_EVENT, handleSessionChange)
+    }
   }, [])
+
+  function notifySessionChanged() {
+    window.dispatchEvent(new Event(ADMIN_SESSION_CHANGE_EVENT))
+  }
 
   function persistToken(nextToken: string) {
     const trimmed = nextToken.trim()
@@ -54,10 +79,12 @@ export function useAdminToken() {
 
     if (!trimmed) {
       window.localStorage.removeItem(ADMIN_TOKEN_STORAGE_KEY)
+      notifySessionChanged()
       return ""
     }
 
     window.localStorage.setItem(ADMIN_TOKEN_STORAGE_KEY, trimmed)
+    notifySessionChanged()
     return trimmed
   }
 
@@ -66,6 +93,7 @@ export function useAdminToken() {
     setToken(nextSession.accessToken)
     window.localStorage.setItem(ADMIN_TOKEN_STORAGE_KEY, nextSession.accessToken)
     window.localStorage.setItem(ADMIN_SESSION_STORAGE_KEY, JSON.stringify(nextSession))
+    notifySessionChanged()
     return nextSession.accessToken
   }
 
@@ -78,6 +106,7 @@ export function useAdminToken() {
     setToken("")
     window.localStorage.removeItem(ADMIN_TOKEN_STORAGE_KEY)
     window.localStorage.removeItem(ADMIN_SESSION_STORAGE_KEY)
+    notifySessionChanged()
   }
 
   function requireToken() {

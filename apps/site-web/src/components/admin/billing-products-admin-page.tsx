@@ -333,12 +333,12 @@ export function BillingProductsAdminPage() {
             <AdminEmptyState title="No products loaded" description="Apply an admin token to load the billing product library." />
           ) : (
             <div className="grid gap-3">
-              {products.map((product) => {
+              {products.map((product, index) => {
                 const isActive = product.id === selectedId
 
                 return (
                   <button
-                    key={product.id}
+                    key={`${product.id}-${product.product_code}-${index}`}
                     type="button"
                     onClick={() => selectProduct(product)}
                     className={`rounded-[1.35rem] border px-4 py-4 text-left transition ${
