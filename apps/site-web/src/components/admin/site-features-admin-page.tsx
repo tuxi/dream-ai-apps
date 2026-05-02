@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useTransition } from "react"
 
+import { AdminImageUploadField } from "@/components/admin/admin-image-upload-field"
 import { AdminField, AdminSectionCard, AdminTextarea, AdminToggle } from "@/components/admin/admin-form-controls"
 import { AdminSessionPanel } from "@/components/admin/admin-session-panel"
 import { AdminStatusBadge } from "@/components/admin/admin-status-badge"
@@ -168,7 +169,7 @@ export function SiteFeaturesAdminPage() {
           </button>
         }
       >
-        <FeatureForm feature={newFeature} onChange={setNewFeature} />
+        <FeatureForm feature={newFeature} token={token} onChange={setNewFeature} />
       </AdminSectionCard>
 
       <div className="grid gap-4">
@@ -199,6 +200,7 @@ export function SiteFeaturesAdminPage() {
           >
             <FeatureForm
               feature={feature}
+              token={token}
               onChange={(nextFeature) =>
                 setFeatures((current) => current.map((item) => (item.id === feature.id ? { ...item, ...nextFeature } : item)))
               }
@@ -212,9 +214,11 @@ export function SiteFeaturesAdminPage() {
 
 function FeatureForm({
   feature,
+  token,
   onChange,
 }: {
   feature: SiteFeaturePayload
+  token: string
   onChange: (feature: SiteFeaturePayload) => void
 }) {
   return (
@@ -226,6 +230,8 @@ function FeatureForm({
       <AdminField label="Tags" value={(feature.tags || []).join(", ")} onChange={(value) => onChange({ ...feature, tags: splitTags(value) })} />
       <AdminField label="Icon URL" value={feature.icon_url || ""} onChange={(value) => onChange({ ...feature, icon_url: value })} />
       <AdminField label="Cover URL" value={feature.cover_image_url || ""} onChange={(value) => onChange({ ...feature, cover_image_url: value })} />
+      <AdminImageUploadField label="Upload Icon" value={feature.icon_url || ""} token={token} onChange={(value) => onChange({ ...feature, icon_url: value })} />
+      <AdminImageUploadField label="Upload Cover" value={feature.cover_image_url || ""} token={token} onChange={(value) => onChange({ ...feature, cover_image_url: value })} />
       <AdminToggle label="Published" checked={Boolean(feature.is_published)} onChange={(value) => onChange({ ...feature, is_published: value })} />
       <AdminTextarea label="Description" value={feature.description || ""} onChange={(value) => onChange({ ...feature, description: value })} />
       <AdminTextarea label="Detail Content" value={feature.detail_content || ""} onChange={(value) => onChange({ ...feature, detail_content: value })} />

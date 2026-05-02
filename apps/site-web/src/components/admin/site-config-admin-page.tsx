@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useTransition } from "react"
 
+import { AdminImageUploadField } from "@/components/admin/admin-image-upload-field"
 import { AdminField, AdminSectionCard, AdminTextarea } from "@/components/admin/admin-form-controls"
 import { AdminSessionPanel } from "@/components/admin/admin-session-panel"
 import { useAdminToken } from "@/components/admin/use-admin-token"
@@ -125,6 +126,8 @@ export function SiteConfigAdminPage() {
           <AdminField label="SEO Title" value={form.seo_title || ""} onChange={(value) => setForm((current) => ({ ...current, seo_title: value }))} />
           <AdminField label="Logo URL" value={form.logo_url || ""} onChange={(value) => setForm((current) => ({ ...current, logo_url: value }))} />
           <AdminField label="Favicon URL" value={form.favicon_url || ""} onChange={(value) => setForm((current) => ({ ...current, favicon_url: value }))} />
+          <AdminImageUploadField label="Upload Logo" value={form.logo_url || ""} token={token} onChange={(value) => setForm((current) => ({ ...current, logo_url: value }))} />
+          <AdminImageUploadField label="Upload Favicon" value={form.favicon_url || ""} token={token} onChange={(value) => setForm((current) => ({ ...current, favicon_url: value }))} />
           <AdminTextarea label="Site Subtitle" value={form.site_subtitle || ""} onChange={(value) => setForm((current) => ({ ...current, site_subtitle: value }))} />
           <AdminTextarea label="Hero Subtitle" value={form.hero_subtitle || ""} onChange={(value) => setForm((current) => ({ ...current, hero_subtitle: value }))} />
           <AdminTextarea label="SEO Description" value={form.seo_description || ""} onChange={(value) => setForm((current) => ({ ...current, seo_description: value }))} />

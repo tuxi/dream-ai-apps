@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useTransition } from "react"
 
+import { AdminImageUploadField } from "@/components/admin/admin-image-upload-field"
 import { AdminField, AdminSectionCard, AdminTextarea } from "@/components/admin/admin-form-controls"
 import { AdminSessionPanel } from "@/components/admin/admin-session-panel"
 import { AdminStatusBadge } from "@/components/admin/admin-status-badge"
@@ -198,7 +199,7 @@ export function SitePostsAdminPage() {
           </button>
         }
       >
-        <PostForm post={newPost} onChange={setNewPost} />
+        <PostForm post={newPost} token={token} onChange={setNewPost} />
       </AdminSectionCard>
 
       <div className="grid gap-4">
@@ -232,6 +233,7 @@ export function SitePostsAdminPage() {
             </div>
             <PostForm
               post={post}
+              token={token}
               onChange={(nextPost) =>
                 setPosts((current) =>
                   current.map((item) =>
@@ -255,9 +257,11 @@ export function SitePostsAdminPage() {
 
 function PostForm({
   post,
+  token,
   onChange,
 }: {
   post: SitePostPayload
+  token: string
   onChange: (post: SitePostPayload) => void
 }) {
   return (
@@ -282,6 +286,7 @@ function PostForm({
         onChange={(value) => onChange({ ...post, published_at: value.trim() ? Number(value) : null })}
       />
       <AdminField label="Cover URL" value={post.cover_image_url || ""} onChange={(value) => onChange({ ...post, cover_image_url: value })} />
+      <AdminImageUploadField label="Upload Cover" value={post.cover_image_url || ""} token={token} onChange={(value) => onChange({ ...post, cover_image_url: value })} />
       <AdminField label="SEO Title" value={post.seo_title || ""} onChange={(value) => onChange({ ...post, seo_title: value })} />
       <AdminTextarea label="Summary" value={post.summary || ""} onChange={(value) => onChange({ ...post, summary: value })} />
       <AdminTextarea label="SEO Description" value={post.seo_description || ""} onChange={(value) => onChange({ ...post, seo_description: value })} />

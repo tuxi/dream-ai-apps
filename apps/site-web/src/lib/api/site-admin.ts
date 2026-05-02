@@ -59,6 +59,19 @@ export type SiteDownloadLinkPayload = {
   sort?: number
 }
 
+export type AdminMediaStsResponse = {
+  access_key_id: string
+  access_key_secret: string
+  security_token: string
+  expiration: string
+  bucket: string
+  region: string
+  endpoint: string
+  host: string
+  dir: string
+  user_id: number
+}
+
 async function request<T>(path: string, options: RequestInit & { token: string }): Promise<T> {
   const deviceHeaders = getClientDeviceHeaders()
   const response = await fetch(`${API_BASE_URL}${path}`, {
@@ -81,6 +94,10 @@ async function request<T>(path: string, options: RequestInit & { token: string }
 
 export function getAdminSiteConfig(token: string) {
   return request<SiteConfig>("/admin/site/config", { method: "GET", token })
+}
+
+export function getAdminMediaSts(token: string) {
+  return request<AdminMediaStsResponse>("/admin/media/sts", { method: "GET", token })
 }
 
 export function updateAdminSiteConfig(token: string, body: SiteConfigPayload) {
