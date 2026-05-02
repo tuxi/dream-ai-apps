@@ -93,7 +93,7 @@
       "lastUpdated": "Last updated: May 1, 2026"
     },
     "intro": {
-      "p1": "The developer of this application (\"we\", \"us\", or \"our\"), as the personal information handler of this Service, understands the importance of personal information and is committed to protecting your personal information security. This Privacy Policy applies to all scenarios in which you use the DreamAI application (\"the App\" or \"the Service\").",
+      "p1": "The developer of this application (\"we\", \"us\", or \"our\"), as the personal information handler of this Service, understands the importance of personal information and is committed to protecting your personal information security. This Privacy Policy applies to all scenarios in which you use the DreamAI mobile application (\"the App\") and the official website (dreamlog.com) (collectively, \"the App\" or \"the Service\").",
       "p2_bold": "Please read this Privacy Policy carefully before using the Service.",
       "p2_rest": "By continuing to use the Service, you acknowledge that you have fully understood and agree to all terms of this Policy. If you disagree with any part of this Policy, please stop using the Service immediately.",
       "p3": "This Privacy Policy is formulated in accordance with the Personal Information Protection Law of the People's Republic of China (\"PIPL\"), the Cybersecurity Law of the People's Republic of China, the Data Security Law of the People's Republic of China, and other relevant laws and regulations, and follows the principles of lawfulness, fairness, necessity, and good faith in processing your personal information."
@@ -111,7 +111,7 @@
       "lastUpdated": "Last updated: May 1, 2026"
     },
     "intro": {
-      "p1": "Welcome to DreamAI. This Terms of Service agreement (\"Agreement\") is entered into between you and the developer of this application (\"we\", \"us\", or \"our\"), and applies to all activities related to your use of the DreamAI application and related services (collectively, \"the Service\").",
+      "p1": "Welcome to DreamAI. This Terms of Service agreement (\"Agreement\") is entered into between you and the developer of this application (\"we\", \"us\", or \"our\"), and applies to all activities related to your use of the DreamAI mobile application (\"the App\") and the official website (dreamlog.com) (collectively, \"the Service\").",
       "p2_bold": "Please read this Agreement carefully before using the Service.",
       "p2_rest": "By clicking \"Agree\", completing registration, or starting to use the Service, you confirm that you have read, understood, and agree to be bound by this Agreement. If you disagree with any terms, please stop using the Service immediately."
     }
@@ -293,6 +293,20 @@
     "readArticle": "Read article"
   },
 
+  "ContentPolicy": {
+    "metadata": {
+      "title": "Content Policy | DreamAI",
+      "description": "DreamAI AI Content Policy — learn about the AI service providers, content labeling rules, prohibited content, and user responsibilities."
+    },
+    "header": {
+      "eyebrow": "Legal",
+      "title": "AI Content Policy",
+      "lastUpdated": "Last updated: May 2, 2026"
+    },
+    "intro": {
+      "p1": "This policy applies to the DreamAI mobile application (\"the App\") and the official website (dreamlog.com) (collectively, \"the Product\"), and describes the AI service providers used, how AI-generated content is labeled, and your rights and obligations when using AI generation features. This policy supplements the Terms of Service and Privacy Policy and carries the same legal effect."
+    }
+  },
   "format": {
     "role_admin": "Admin",
     "role_user": "User",
