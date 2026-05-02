@@ -6,6 +6,11 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts")
 const nextConfig = {
   reactStrictMode: true,
   output: "standalone",
+  experimental: {
+    outputFileTracingIncludes: {
+      "/": ["./messages/**/*"],
+    },
+  },
   images: {
     remotePatterns: [
       // 阿里云 OSS — 替换为实际的 bucket hostname
