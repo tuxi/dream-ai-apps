@@ -1,0 +1,63 @@
+name: Deploy site-web
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "apps/site-web/**"
+      - ".github/workflows/deploy-site-web.yml"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: apps/site-web
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/dreamlog-site:latest
+          build-args: |
+            NEXT_PUBLIC_SITE_API_BASE_URL=${{ secrets.NEXT_PUBLIC_SITE_API_BASE_URL }}
+            NEXT_PUBLIC_OSS_HOST=${{ secrets.NEXT_PUBLIC_OSS_HOST }}
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # 登录 ghcr.io 拉取镜像
+            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+            # 拉取最新镜像
+            docker pull ghcr.io/${{ github.repository_owner }}/dreamlog-site:latest
+
+            # 停止并删除旧容器
+            docker stop dreamlog-site 2>/dev/null || true
+            docker rm dreamlog-site 2>/dev/null || true
+
+            # 启动新容器
+            docker run -d \
+              --name dreamlog-site \
+              --restart unless-stopped \
+              -p 3000:3000 \
+              ghcr.io/${{ github.repository_owner }}/dreamlog-site:latest
+
+            # 清理旧镜像
+            docker image prune -f
