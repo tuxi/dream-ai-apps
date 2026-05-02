@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm view *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('Weekly:', d.get\\('weekly', 'N/A'\\), 'Monthly:', d.get\\('monthly', 'N/A'\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('size:', d.get\\('dist', {}\\).get\\('unpackedSize', 'N/A'\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; versions=json.load\\(sys.stdin\\); v16=[v for v in versions if v.startswith\\('16.'\\)]; print\\('Latest 16.x:', v16[-1] if v16 else 'none'\\); print\\('Total 16.x:', len\\(v16\\)\\); print\\('All versions:', len\\(versions\\)\\)\")",
+      "Bash(npm search *)",
+      "Bash(python3 -c ' *)",
+      "Bash(npm pack *)",
+      "Read(//private/tmp/**)",
+      "Bash(rm -f /tmp/next-intl-*.tgz)",
+      "Bash(rm -f /tmp/next-i18next-*.tgz)",
+      "Bash(npm info *)",
+      "WebSearch",
+      "WebFetch(domain:next-intl.dev)",
+      "WebFetch(domain:32blog.com)",
+      "WebFetch(domain:www.locize.com)",
+      "WebFetch(domain:blog.wenhaofree.com)",
+      "Bash(tar xzf *)",
+      "Read(//tmp/package/**)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:i18nexus.com)",
+      "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:dev.to)",
+      "WebFetch(domain:www.buildwithmatija.com)",
+      "Bash(rm -rf /tmp/package /tmp/next-intl-4.11.0.tgz)",
+      "Bash(npm install *)",
+      "Bash(npm config *)",
+      "Bash(npx next *)",
+      "Bash(npm rebuild *)",
+      "Bash(npm ls *)",
+      "Bash(python3 *)",
+      "Bash(npm run *)",
+      "Bash(git checkout *)"
+    ]
+  }
+}

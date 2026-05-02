@@ -1,14 +1,18 @@
+import { getTranslations } from "next-intl/server"
+
 import { SiteFeature } from "@/types/site"
 
 import { SectionTitle } from "./section-title"
 
-export function FeatureGrid({ features }: { features: SiteFeature[] }) {
+export async function FeatureGrid({ features }: { features: SiteFeature[] }) {
+  const t = await getTranslations("FeatureGrid")
+
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
       <SectionTitle
-        eyebrow="Capabilities"
-        title="Built around the workflows DreamAI actually wants to own"
-        description="The website language stays aligned with the current backend business direction, especially creator and commerce-oriented video workflows."
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        description={t("description")}
       />
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         {features.map((feature) => (
@@ -19,7 +23,7 @@ export function FeatureGrid({ features }: { features: SiteFeature[] }) {
             <div className="flex items-start justify-between gap-6">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">{feature.key}</p>
               <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-                Live
+                {t("live")}
               </span>
             </div>
             <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">{feature.title}</h3>

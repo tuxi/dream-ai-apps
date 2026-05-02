@@ -1,9 +1,9 @@
-export function formatUnixDate(value?: number) {
+export function formatUnixDate(value?: number, locale = "en-US") {
   if (!value) {
     return ""
   }
 
-  return new Date(value * 1000).toLocaleDateString("en-US", {
+  return new Date(value * 1000).toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",

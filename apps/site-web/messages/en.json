@@ -1,0 +1,304 @@
+{
+  "SiteShell": {
+    "nav": {
+      "features": "Features",
+      "about": "About",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "download": "Download",
+      "contact": "Contact"
+    },
+    "footer": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact",
+      "github": "GitHub",
+      "icp": "京ICP备19030687号",
+      "by": "by"
+    }
+  },
+
+  "Home": {
+    "metadata": {
+      "title": "DreamAI | AI Video Generator"
+    },
+    "postGridTitle": "Fresh from the DreamAI team"
+  },
+
+  "About": {
+    "metadata": {
+      "title": "About | DreamAI",
+      "description": "DreamAI is an AI video tool built by an indie developer, making professional video creation accessible to everyone."
+    },
+    "hero": {
+      "eyebrow": "About",
+      "title": "DreamAI, an indie project",
+      "description": "We're building a product that makes AI video generation accessible — from text to video, from idea to screen, in one seamless flow."
+    },
+    "brandPanel": {
+      "label": "Relationship",
+      "developer": {
+        "name": "Indie Developer",
+        "desc": "Product development and operations, built independently."
+      },
+      "product": {
+        "name": "DreamAI",
+        "desc": "Product name, available on the App Store."
+      }
+    },
+    "milestones": [
+      {
+        "label": "Positioning",
+        "title": "AI video generation for everyone",
+        "description": "DreamAI focuses on lowering the barrier to video creation. Whether you're a content creator, short-video creator, or e-commerce merchant, you can generate professional-quality videos in minutes."
+      },
+      {
+        "label": "Core Capabilities",
+        "title": "Five generation modes",
+        "description": "Text-to-video, image-to-video, start/end frame control, AI motion control, and commerce video — five modes covering the core needs of creators and businesses."
+      },
+      {
+        "label": "Our Mission",
+        "title": "Don't let creativity be blocked by technology",
+        "description": "Complex video production was once the exclusive domain of professional teams. DreamAI believes when AI technology is easy enough, anyone with an idea can turn it into video."
+      }
+    ],
+    "contactSection": {
+      "eyebrow": "Contact Us",
+      "title": "Have ideas? We'd love to hear them.",
+      "description": "Whether it's product feedback, partnership inquiries, or usage questions, reach out via email. We read every message carefully."
+    },
+    "filingSection": {
+      "title": "Filing & Disclosure",
+      "operator": "Operator",
+      "operatorName": "tuxi",
+      "operatorDesc": "DreamAI product development & operations",
+      "github": "GitHub",
+      "icp": "ICP Filing No.",
+      "contactEmail": "Contact Email",
+      "legalDocs": "Legal Documents",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+
+  "Privacy": {
+    "metadata": {
+      "title": "Privacy Policy | DreamAI",
+      "description": "DreamAI Privacy Policy — learn how we collect, use, and protect your personal information."
+    },
+    "header": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: May 1, 2026"
+    },
+    "intro": {
+      "p1": "The developer of this application (\"we\", \"us\", or \"our\"), as the personal information handler of this Service, understands the importance of personal information and is committed to protecting your personal information security. This Privacy Policy applies to all scenarios in which you use the DreamAI application (\"the App\" or \"the Service\").",
+      "p2_bold": "Please read this Privacy Policy carefully before using the Service.",
+      "p2_rest": "By continuing to use the Service, you acknowledge that you have fully understood and agree to all terms of this Policy. If you disagree with any part of this Policy, please stop using the Service immediately.",
+      "p3": "This Privacy Policy is formulated in accordance with the Personal Information Protection Law of the People's Republic of China (\"PIPL\"), the Cybersecurity Law of the People's Republic of China, the Data Security Law of the People's Republic of China, and other relevant laws and regulations, and follows the principles of lawfulness, fairness, necessity, and good faith in processing your personal information."
+    }
+  },
+
+  "Terms": {
+    "metadata": {
+      "title": "Terms of Service | DreamAI",
+      "description": "DreamAI Terms of Service — please read carefully before using the Service."
+    },
+    "header": {
+      "eyebrow": "Legal",
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: May 1, 2026"
+    },
+    "intro": {
+      "p1": "Welcome to DreamAI. This Terms of Service agreement (\"Agreement\") is entered into between you and the developer of this application (\"we\", \"us\", or \"our\"), and applies to all activities related to your use of the DreamAI application and related services (collectively, \"the Service\").",
+      "p2_bold": "Please read this Agreement carefully before using the Service.",
+      "p2_rest": "By clicking \"Agree\", completing registration, or starting to use the Service, you confirm that you have read, understood, and agree to be bound by this Agreement. If you disagree with any terms, please stop using the Service immediately."
+    }
+  },
+
+  "Contact": {
+    "metadata": {
+      "title": "Contact | DreamAI"
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Reach the DreamAI team",
+      "description": "Contact is simple in phase one, but it still belongs in the same polished experience as the rest of the site. The primary channel is managed from the site config API."
+    },
+    "aside": {
+      "label": "Support channel",
+      "description": "A lightweight support route now, with room for richer contact workflows later."
+    },
+    "support": {
+      "eyebrow": "Support",
+      "title": "A clear contact path is part of the product promise",
+      "description": "Even in a lean website release, trust comes from showing where users can go when they need help, clarification, or follow-up.",
+      "emailLabel": "Support email",
+      "whatToAsk": "What to ask here",
+      "whatToAskItems": [
+        "Product questions before download",
+        "Brand or partnership introductions",
+        "Website and content corrections"
+      ],
+      "simplePurpose": "Why this page stays simple",
+      "simplePurposeText": "Phase one is focused on a strong primary route instead of a sprawling support center, which keeps the site crisp while preserving operational flexibility."
+    }
+  },
+
+  "Download": {
+    "metadata": {
+      "title": "Download | DreamAI"
+    },
+    "hero": {
+      "eyebrow": "Download",
+      "title": "Get DreamAI",
+      "description": "DreamAI is available on the iOS App Store. Choose the workflow that fits you best, download the app, and start turning your ideas into video."
+    },
+    "aside": {
+      "label": "Launch focus",
+      "items": ["App Store conversion", "Product education", "Future platform expansion"]
+    },
+    "features": [
+      "Mobile-first experience",
+      "API-driven content",
+      "Ready for CMS extension"
+    ],
+    "cards": {
+      "platform": {
+        "title": "Current platform",
+        "headline": "iOS first",
+        "description": "The website is optimized for iOS. Visit dreamlog.com on your iPhone to get the best experience."
+      },
+      "role": {
+        "title": "Website role",
+        "headline": "Conversion surface",
+        "description": "The website is for product discovery and brand storytelling, while video generation happens inside the iOS app."
+      },
+      "future": {
+        "title": "Future-ready",
+        "headline": "More links later",
+        "description": "The content system behind the site is designed to grow with new platforms as the product expands."
+      }
+    }
+  },
+
+  "FAQ": {
+    "metadata": {
+      "title": "FAQ | DreamAI"
+    }
+  },
+
+  "Features": {
+    "metadata": {
+      "title": "Features | DreamAI"
+    }
+  },
+
+  "Blog": {
+    "metadata": {
+      "title": "Blog | DreamAI"
+    },
+    "title": "Blog and product notes"
+  },
+
+  "BlogPost": {
+    "metadata": {
+      "title": "{title} | DreamAI"
+    },
+    "eyebrow": "Blog",
+    "defaultDescription": "Product note, launch context, and positioning detail from the DreamAI team.",
+    "aside": {
+      "label": "Article meta",
+      "published": "Published",
+      "status": "Status"
+    },
+    "readingNote": {
+      "title": "Reading note",
+      "description": "The blog is designed as a lightweight content layer for launches, updates, and product positioning, backed by the same content API that drives the public site."
+    }
+  },
+
+  "HeroSection": {
+    "badge": "DreamAI",
+    "ctaPrimary": "Download on the App Store",
+    "ctaSecondary": "Explore Features",
+    "pills": ["Text-led ideation", "Motion intent", "Commerce storytelling"],
+    "preview": "Product preview",
+    "flows": ["Text to video concepts", "Image-led motion", "Start/end frame control", "Commerce storytelling"],
+    "flowPrefix": "Flow",
+    "phaseEyebrow": "Website Phase One",
+    "phaseTitle": "Brand storytelling, feature education, and App Store conversion."
+  },
+
+  "ScenarioStrip": {
+    "scenarios": [
+      {
+        "title": "Content Creators",
+        "description": "Quickly generate video concept drafts from ideas and validate creative direction before entering full production."
+      },
+      {
+        "title": "E-commerce Merchants",
+        "description": "Generate high-quality product showcase videos for product pages and marketing campaigns."
+      },
+      {
+        "title": "Brand Teams",
+        "description": "Explore richer visual language and narrative pacing, with quick drafts for campaign assets."
+      }
+    ]
+  },
+
+  "MetricsBand": {
+    "metrics": [
+      { "label": "Generation modes", "value": "5" },
+      { "label": "Platforms", "value": "iOS" },
+      { "label": "Languages", "value": "ZH·EN" },
+      { "label": "Site version", "value": "Phase 1" }
+    ]
+  },
+
+  "ShowcasePanel": {
+    "eyebrow": "Product View",
+    "title": "A website that feels closer to the product",
+    "description": "More than a feature list — the DreamAI website is designed so visitors can intuitively feel the product's capabilities before downloading.",
+    "canvas": "Workflow canvas",
+    "creativeFlows": "DreamAI creative flows",
+    "phase": "Phase One"
+  },
+
+  "FeatureGrid": {
+    "eyebrow": "Capabilities",
+    "title": "Content-first feature showcase",
+    "description": "Each feature module is driven by the dynamic site config API, keeping the showcase always up to date.",
+    "live": "Live"
+  },
+
+  "DownloadPanel": {
+    "eyebrow": "Download",
+    "title": "Get DreamAI on your device",
+    "description": "Pick a platform to get started. Download links are updated dynamically through the site admin panel.",
+    "features": ["Mobile-first experience", "API-driven content", "Ready for CMS extension"]
+  },
+
+  "FAQList": {
+    "eyebrow": "FAQ",
+    "title": "Get to know DreamAI",
+    "description": "Concise answers covering product overview, creative workflows, and support channels."
+  },
+
+  "PostGrid": {
+    "eyebrow": "Blog",
+    "title": "Latest updates",
+    "description": "Use the blog as a lightweight content system for product updates, launches, and positioning notes.",
+    "readArticle": "Read article"
+  },
+
+  "format": {
+    "role_admin": "Admin",
+    "role_user": "User",
+    "role_svip": "SVIP",
+    "role_vip": "VIP",
+    "role_guest": "Guest",
+    "role_unknown": "Unknown"
+  }
+}

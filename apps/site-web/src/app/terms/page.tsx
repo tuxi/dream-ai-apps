@@ -1,28 +1,30 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "用户协议 | DreamAI",
-  description: "DreamAI 用户服务协议 — 使用本服务前请仔细阅读。",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Terms")
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  }
 }
 
-export default function TermsPage() {
+export default async function TermsPage() {
+  const t = await getTranslations("Terms")
+
   return (
     <section className="mx-auto max-w-4xl px-6 py-20">
       <div className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-accent">Legal</p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink">用户服务协议</h1>
-        <p className="mt-4 text-sm text-slate-500">最后更新日期：2026 年 5 月 1 日</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-accent">{t("header.eyebrow")}</p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink">{t("header.title")}</h1>
+        <p className="mt-4 text-sm text-slate-500">{t("header.lastUpdated")}</p>
       </div>
 
       <div className="space-y-10 text-sm leading-8 text-slate-700">
 
         <div className="rounded-[2rem] border border-line bg-white/90 p-8 space-y-4">
-          <p>
-            欢迎使用 DreamAI。本用户服务协议（以下简称"本协议"）由您与本应用开发者（以下简称"我们"）共同签订，适用于您使用 DreamAI 应用程序及相关服务（以下统称"本服务"）的全部行为。
-          </p>
-          <p>
-            <strong>请在使用本服务前仔细阅读本协议的全部内容。</strong>当您点击"同意"、完成注册或开始使用本服务时，即表示您已阅读、理解并同意接受本协议的约束。如您不同意本协议的任何条款，请立即停止使用本服务。
-          </p>
+          <p>{t("intro.p1")}</p>
+          <p><strong>{t("intro.p2_bold")}</strong>{t("intro.p2_rest")}</p>
         </div>
 
         <Section title="协议签订主体">

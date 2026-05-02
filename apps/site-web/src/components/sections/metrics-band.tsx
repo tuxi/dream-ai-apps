@@ -1,11 +1,10 @@
-const metrics = [
-  { label: "Website goal", value: "Download conversion" },
-  { label: "Content system", value: "API-driven" },
-  { label: "Frontend stack", value: "Next.js + Tailwind" },
-  { label: "Backend shape", value: "Existing Go business rules" },
-]
+import { getMessages, getTranslations } from "next-intl/server"
 
-export function MetricsBand() {
+export async function MetricsBand() {
+  const messages = (await getMessages()) as Record<string, unknown>
+  const mbMessages = messages.MetricsBand as Record<string, unknown>
+  const metrics = mbMessages.metrics as Array<{ label: string; value: string }>
+
   return (
     <section className="mx-auto max-w-6xl px-6 py-6">
       <div className="grid gap-4 rounded-[2.1rem] border border-line/80 bg-white/88 p-6 md:grid-cols-4">

@@ -1,19 +1,10 @@
-const scenarios = [
-  {
-    title: "Creators",
-    description: "Explore visual ideas faster when you need short-form concepts before full production.",
-  },
-  {
-    title: "Merchants",
-    description: "Turn product assets into conversion-friendly motion stories with less creative overhead.",
-  },
-  {
-    title: "Brand teams",
-    description: "Use AI video workflows to test launch narratives, campaign hooks, and visual directions quickly.",
-  },
-]
+import { getMessages, getTranslations } from "next-intl/server"
 
-export function ScenarioStrip() {
+export async function ScenarioStrip() {
+  const messages = (await getMessages()) as Record<string, unknown>
+  const ssMessages = messages.ScenarioStrip as Record<string, unknown>
+  const scenarios = ssMessages.scenarios as Array<{ title: string; description: string }>
+
   return (
     <section className="mx-auto max-w-6xl px-6 py-8">
       <div className="grid gap-4 rounded-[2.25rem] border border-white/70 bg-white/75 p-5 shadow-float backdrop-blur md:grid-cols-3">

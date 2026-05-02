@@ -1,21 +1,28 @@
 import Link from "next/link"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import { SiteConfig, SiteDownloadLink } from "@/types/site"
 
-export function HeroSection({
+export async function HeroSection({
   config,
   downloads,
 }: {
   config: SiteConfig
   downloads: SiteDownloadLink[]
 }) {
+  const t = await getTranslations("HeroSection")
+  const messages = (await getMessages()) as Record<string, unknown>
+  const hsMessages = messages.HeroSection as Record<string, unknown>
+  const pills = hsMessages.pills as string[]
+  const flows = hsMessages.flows as string[]
+
   const primaryLink = downloads[0]?.url || config.primary_cta_link || "/download"
 
   return (
     <section className="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
       <div className="relative">
         <div className="inline-flex rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm font-medium text-accent">
-          DreamAI
+          {t("badge")}
         </div>
         <h1 className="mt-6 text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
           {config.hero_title}
@@ -26,17 +33,17 @@ export function HeroSection({
             href={primaryLink}
             className="rounded-full bg-ink px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-800"
           >
-            {config.primary_cta_text || "Download on the App Store"}
+            {config.primary_cta_text || t("ctaPrimary")}
           </Link>
           <Link
             href={config.secondary_cta_link || "/features"}
             className="rounded-full border border-line bg-white px-6 py-3 text-center text-sm font-semibold text-ink transition hover:border-slate-400"
           >
-            {config.secondary_cta_text || "Explore Features"}
+            {config.secondary_cta_text || t("ctaSecondary")}
           </Link>
         </div>
         <div className="mt-10 grid max-w-xl gap-4 sm:grid-cols-3">
-          {["Text-led ideation", "Motion intent", "Commerce storytelling"].map((item) => (
+          {pills.map((item) => (
             <div key={item} className="rounded-[1.3rem] border border-line/80 bg-white/80 px-4 py-4 text-sm font-medium text-slate-700">
               {item}
             </div>
@@ -52,25 +59,20 @@ export function HeroSection({
               <span className="h-3 w-3 rounded-full bg-amber-400" />
               <span className="h-3 w-3 rounded-full bg-emerald-400" />
             </div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Product preview</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{t("preview")}</p>
           </div>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {[
-              "Text to video concepts",
-              "Image-led motion",
-              "Start/end frame control",
-              "Commerce storytelling",
-            ].map((item, index) => (
+            {flows.map((item, index) => (
               <div key={item} className="rounded-[1.5rem] bg-mist p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Flow {index + 1}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{t("flowPrefix")} {index + 1}</p>
                 <p className="mt-3 text-lg font-medium text-ink">{item}</p>
               </div>
             ))}
           </div>
           <div className="mt-6 rounded-[1.7rem] bg-[linear-gradient(135deg,#102033,#0f766e)] p-6 text-white">
-            <p className="text-sm uppercase tracking-[0.24em] text-white/60">Website Phase One</p>
+            <p className="text-sm uppercase tracking-[0.24em] text-white/60">{t("phaseEyebrow")}</p>
             <p className="mt-3 text-2xl font-semibold leading-tight">
-              Brand storytelling, feature education, and App Store conversion.
+              {t("phaseTitle")}
             </p>
           </div>
         </div>

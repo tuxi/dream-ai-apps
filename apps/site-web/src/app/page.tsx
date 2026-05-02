@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server"
+
 import { DownloadPanel } from "@/components/sections/download-panel"
 import { FAQList } from "@/components/sections/faq-list"
 import { FeatureGrid } from "@/components/sections/feature-grid"
@@ -9,6 +11,7 @@ import { ShowcasePanel } from "@/components/sections/showcase-panel"
 import { getSiteConfig, getSiteDownloadLinks, getSiteFaqs, getSiteFeatures, getSitePosts } from "@/lib/api/site"
 
 export default async function HomePage() {
+  const t = await getTranslations("Home")
   const [config, features, faqs, downloads, posts] = await Promise.all([
     getSiteConfig(),
     getSiteFeatures(),
@@ -26,7 +29,7 @@ export default async function HomePage() {
       <FeatureGrid features={features.slice(0, 4)} />
       <DownloadPanel links={downloads} />
       <FAQList faqs={faqs} compact />
-      <PostGrid posts={posts.items} title="Fresh from the DreamAI team" />
+      <PostGrid posts={posts.items} title={t("postGridTitle")} />
     </>
   )
 }

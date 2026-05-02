@@ -1,31 +1,31 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "隐私政策 | DreamAI",
-  description: "DreamAI 隐私政策 — 了解我们如何收集、使用和保护您的个人信息。",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Privacy")
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  }
 }
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
+  const t = await getTranslations("Privacy")
+
   return (
     <section className="mx-auto max-w-4xl px-6 py-20">
       <div className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-accent">Legal</p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink">隐私政策</h1>
-        <p className="mt-4 text-sm text-slate-500">最后更新日期：2026 年 5 月 1 日</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-accent">{t("header.eyebrow")}</p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink">{t("header.title")}</h1>
+        <p className="mt-4 text-sm text-slate-500">{t("header.lastUpdated")}</p>
       </div>
 
       <div className="prose-policy space-y-10 text-sm leading-8 text-slate-700">
 
         <div className="rounded-[2rem] border border-line bg-white/90 p-8 space-y-4">
-          <p>
-            本应用开发者（以下简称"我们"），作为本服务的个人信息处理者，深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。本隐私政策适用于您使用 DreamAI 应用程序（以下简称"本应用"或"服务"）的全部场景。
-          </p>
-          <p>
-            <strong>请您在使用本服务前仔细阅读本隐私政策的全部内容。</strong>如您继续使用本服务，即表示您已充分理解并同意本政策的全部内容。如您不同意本政策的任何内容，请立即停止使用本服务。
-          </p>
-          <p>
-            本隐私政策依据《中华人民共和国个人信息保护法》（以下简称"《个保法》"）、《中华人民共和国网络安全法》（以下简称"《网络安全法》"）、《中华人民共和国数据安全法》（以下简称"《数据安全法》"）及相关法律法规制定，并遵循合法、正当、必要和诚信原则处理您的个人信息。
-          </p>
+          <p>{t("intro.p1")}</p>
+          <p><strong>{t("intro.p2_bold")}</strong>{t("intro.p2_rest")}</p>
+          <p>{t("intro.p3")}</p>
         </div>
 
         <Section title="个人信息处理者信息">

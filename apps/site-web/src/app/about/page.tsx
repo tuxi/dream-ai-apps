@@ -1,51 +1,40 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { getMessages, getTranslations } from "next-intl/server"
+
 import { PageHero } from "@/components/sections/page-hero"
 
-export const metadata: Metadata = {
-  title: "关于我们 | DreamAI",
-  description: "DreamAI 是由个人开发者打造的 AI 视频生成工具，让每一位创作者和商家都能轻松制作专业视频。",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("About")
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  }
 }
 
-const milestones = [
-  {
-    label: "产品定位",
-    title: "AI 视频生成，人人可用",
-    description:
-      "DreamAI 专注于降低视频创作的门槛。无论是内容创作者、短视频达人，还是电商商家，都可以通过文字描述、图片或简单的参数设置，在几分钟内生成专业品质的视频。",
-  },
-  {
-    label: "核心能力",
-    title: "五大生成模式",
-    description:
-      "文生视频、图生视频、首尾帧控制、AI 动作控制、带货电商视频——五种模式覆盖创作者和商业场景的核心需求，并在持续迭代中。",
-  },
-  {
-    label: "我们的使命",
-    title: "让创意不再被技术拦住",
-    description:
-      "复杂的视频制作曾经是专业团队的专属能力。DreamAI 相信，当 AI 技术足够易用，每一个有想法的人都能把创意变成视频。",
-  },
-]
+export default async function AboutPage() {
+  const t = await getTranslations("About")
+  const messages = (await getMessages()) as Record<string, unknown>
+  const aboutMessages = messages.About as Record<string, unknown>
+  const milestones = aboutMessages.milestones as Array<{ label: string; title: string; description: string }>
 
-export default function AboutPage() {
   return (
     <div className="pb-20">
       <PageHero
-        eyebrow="关于我们"
-        title="DreamAI，独立开发作品"
-        description="我们正在构建一个让 AI 视频生成触手可及的产品——从文字到视频，从创意到画面，一步到位。"
+        eyebrow={t("hero.eyebrow")}
+        title={t("hero.title")}
+        description={t("hero.description")}
         aside={
           <div className="rounded-[2rem] border border-white/60 bg-white/80 p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">品牌关系</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{t("brandPanel.label")}</p>
             <div className="mt-5 space-y-4">
               <div className="rounded-[1.35rem] bg-mist p-4">
-                <p className="text-sm font-semibold text-ink">独立开发者</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">产品研发与运营，由个人独立完成。</p>
+                <p className="text-sm font-semibold text-ink">{t("brandPanel.developer.name")}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{t("brandPanel.developer.desc")}</p>
               </div>
               <div className="rounded-[1.35rem] bg-white p-4 ring-1 ring-line">
-                <p className="text-sm font-semibold text-ink">DreamAI</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">产品名称，App Store 上架应用。</p>
+                <p className="text-sm font-semibold text-ink">{t("brandPanel.product.name")}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{t("brandPanel.product.desc")}</p>
               </div>
             </div>
           </div>
@@ -65,11 +54,9 @@ export default function AboutPage() {
 
         <div className="mt-6 rounded-[2.2rem] bg-[linear-gradient(145deg,#102033,#17395d,#0f766e)] p-10 text-white shadow-float">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/55">联系我们</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight">有想法？欢迎告诉我们。</h2>
-            <p className="mt-5 text-sm leading-8 text-white/74">
-              无论是产品反馈、合作咨询，还是使用中遇到的问题，都可以通过邮件联系我们。我们会认真对待每一封来信。
-            </p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/55">{t("contactSection.eyebrow")}</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight">{t("contactSection.title")}</h2>
+            <p className="mt-5 text-sm leading-8 text-white/74">{t("contactSection.description")}</p>
             <a
               href="mailto:support@dreamlog.com"
               className="mt-8 inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink"
@@ -80,15 +67,15 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-6 rounded-[2rem] border border-line bg-white/90 p-8">
-          <h2 className="text-lg font-semibold text-ink mb-5">备案公示</h2>
+          <h2 className="text-lg font-semibold text-ink mb-5">{t("filingSection.title")}</h2>
           <div className="grid gap-4 text-sm leading-7 text-slate-700 sm:grid-cols-2">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">运营者</p>
-              <p className="mt-1 font-semibold">tuxi</p>
-              <p className="mt-0.5 text-slate-500">DreamAI 产品开发与运营</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{t("filingSection.operator")}</p>
+              <p className="mt-1 font-semibold">{t("filingSection.operatorName")}</p>
+              <p className="mt-0.5 text-slate-500">{t("filingSection.operatorDesc")}</p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">GitHub</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{t("filingSection.github")}</p>
               <p className="mt-1">
                 <a
                   href="https://github.com/tuxi"
@@ -101,7 +88,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">ICP 备案号</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{t("filingSection.icp")}</p>
               <p className="mt-1">
                 <a
                   href="https://beian.miit.gov.cn/"
@@ -114,7 +101,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">联系邮箱</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{t("filingSection.contactEmail")}</p>
               <p className="mt-1">
                 <a href="mailto:support@dreamlog.com" className="font-semibold text-ink underline underline-offset-2 transition hover:text-accent">
                   support@dreamlog.com
@@ -122,10 +109,10 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="sm:col-span-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">法定文书</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{t("filingSection.legalDocs")}</p>
               <p className="mt-1 flex gap-3">
-                <Link href="/privacy" className="font-semibold text-ink underline underline-offset-2 transition hover:text-accent">隐私政策</Link>
-                <Link href="/terms" className="font-semibold text-ink underline underline-offset-2 transition hover:text-accent">用户协议</Link>
+                <Link href="/privacy" className="font-semibold text-ink underline underline-offset-2 transition hover:text-accent">{t("filingSection.privacy")}</Link>
+                <Link href="/terms" className="font-semibold text-ink underline underline-offset-2 transition hover:text-accent">{t("filingSection.terms")}</Link>
               </p>
             </div>
           </div>

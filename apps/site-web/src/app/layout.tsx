@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
+import { NextIntlClientProvider } from "next-intl"
+import { getLocale, getMessages } from "next-intl/server"
 
 import "./globals.css"
 
@@ -21,10 +23,22 @@ export default async function RootLayout({
 }>) {
   const config = await getSiteConfig()
 
+  let locale = "zh"
+  let messages: Record<string, unknown> | undefined
+
+  try {
+    locale = await getLocale()
+    messages = (await getMessages()) as Record<string, unknown>
+  } catch {
+    // Admin 路径跳过 i18n 中间件，没有上下文
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
-        <AppFrame config={config}>{children}</AppFrame>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <AppFrame config={config}>{children}</AppFrame>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

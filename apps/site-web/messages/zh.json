@@ -1,0 +1,306 @@
+{
+  "SiteShell": {
+    "nav": {
+      "features": "Features",
+      "about": "About",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "download": "Download",
+      "contact": "Contact"
+    },
+    "footer": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact",
+      "github": "GitHub",
+      "icp": "京ICP备19030687号",
+      "by": "by"
+    }
+  },
+  "Home": {
+    "metadata": {
+      "title": "DreamAI | AI 视频生成器"
+    },
+    "postGridTitle": "来自 DreamAI 团队的最新动态"
+  },
+  "About": {
+    "metadata": {
+      "title": "关于我们 | DreamAI",
+      "description": "DreamAI 是由个人开发者打造的 AI 视频生成工具，让每一位创作者和商家都能轻松制作专业视频。"
+    },
+    "hero": {
+      "eyebrow": "关于我们",
+      "title": "DreamAI，独立开发作品",
+      "description": "我们正在构建一个让 AI 视频生成触手可及的产品——从文字到视频，从创意到画面，一步到位。"
+    },
+    "brandPanel": {
+      "label": "品牌关系",
+      "developer": {
+        "name": "独立开发者",
+        "desc": "产品研发与运营，由个人独立完成。"
+      },
+      "product": {
+        "name": "DreamAI",
+        "desc": "产品名称，App Store 上架应用。"
+      }
+    },
+    "milestones": [
+      {
+        "label": "产品定位",
+        "title": "AI 视频生成，人人可用",
+        "description": "DreamAI 专注于降低视频创作的门槛。无论是内容创作者、短视频达人，还是电商商家，都可以通过文字描述、图片或简单的参数设置，在几分钟内生成专业品质的视频。"
+      },
+      {
+        "label": "核心能力",
+        "title": "五大生成模式",
+        "description": "文生视频、图生视频、首尾帧控制、AI 动作控制、带货电商视频——五种模式覆盖创作者和商业场景的核心需求，并在持续迭代中。"
+      },
+      {
+        "label": "我们的使命",
+        "title": "让创意不再被技术拦住",
+        "description": "复杂的视频制作曾经是专业团队的专属能力。DreamAI 相信，当 AI 技术足够易用，每一个有想法的人都能把创意变成视频。"
+      }
+    ],
+    "contactSection": {
+      "eyebrow": "联系我们",
+      "title": "有想法？欢迎告诉我们。",
+      "description": "无论是产品反馈、合作咨询，还是使用中遇到的问题，都可以通过邮件联系我们。我们会认真对待每一封来信。"
+    },
+    "filingSection": {
+      "title": "备案公示",
+      "operator": "运营者",
+      "operatorName": "tuxi",
+      "operatorDesc": "DreamAI 产品开发与运营",
+      "github": "GitHub",
+      "icp": "ICP 备案号",
+      "contactEmail": "联系邮箱",
+      "legalDocs": "法定文书",
+      "privacy": "隐私政策",
+      "terms": "用户协议"
+    }
+  },
+  "Privacy": {
+    "metadata": {
+      "title": "隐私政策 | DreamAI",
+      "description": "DreamAI 隐私政策 — 了解我们如何收集、使用和保护您的个人信息。"
+    },
+    "header": {
+      "eyebrow": "Legal",
+      "title": "隐私政策",
+      "lastUpdated": "最后更新日期：2026 年 5 月 1 日"
+    },
+    "intro": {
+      "p1": "本应用开发者（以下简称“我们”），作为本服务的个人信息处理者，深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。本隐私政策适用于您使用 DreamAI 应用程序（以下简称“本应用”或“服务”）的全部场景。",
+      "p2_bold": "请您在使用本服务前仔细阅读本隐私政策的全部内容。",
+      "p2_rest": "如您继续使用本服务，即表示您已充分理解并同意本政策的全部内容。如您不同意本政策的任何内容，请立即停止使用本服务。",
+      "p3": "本隐私政策依据《中华人民共和国个人信息保护法》（以下简称“《个保法》”）、《中华人民共和国网络安全法》（以下简称“《网络安全法》”）、《中华人民共和国数据安全法》（以下简称“《数据安全法》”）及相关法律法规制定，并遵循合法、正当、必要和诚信原则处理您的个人信息。"
+    }
+  },
+  "Terms": {
+    "metadata": {
+      "title": "用户协议 | DreamAI",
+      "description": "DreamAI 用户服务协议 — 使用本服务前请仔细阅读。"
+    },
+    "header": {
+      "eyebrow": "Legal",
+      "title": "用户服务协议",
+      "lastUpdated": "最后更新日期：2026 年 5 月 1 日"
+    },
+    "intro": {
+      "p1": "欢迎使用 DreamAI。本用户服务协议（以下简称“本协议”）由您与本应用开发者（以下简称“我们”）共同签订，适用于您使用 DreamAI 应用程序及相关服务（以下统称“本服务”）的全部行为。",
+      "p2_bold": "请在使用本服务前仔细阅读本协议的全部内容。",
+      "p2_rest": "当您点击“同意”、完成注册或开始使用本服务时，即表示您已阅读、理解并同意接受本协议的约束。如您不同意本协议的任何条款，请立即停止使用本服务。"
+    }
+  },
+  "Contact": {
+    "metadata": {
+      "title": "Contact | DreamAI"
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "联系 DreamAI 团队",
+      "description": "第一阶段联系方式很简单，但我们依然将其放在与网站其他部分同样精致的体验中。主要联系方式通过站点配置 API 管理。"
+    },
+    "aside": {
+      "label": "Support channel",
+      "description": "现在是一套轻量级的支持通道，未来可以扩展为更丰富的联系工作流。"
+    },
+    "support": {
+      "eyebrow": "Support",
+      "title": "明确的联系方式是产品承诺的一部分",
+      "description": "即使在一个简洁的网站版本中，让用户知道去哪里寻求帮助、澄清问题或后续跟进，也能建立信任。",
+      "emailLabel": "Support email",
+      "whatToAsk": "可以问什么",
+      "whatToAskItems": [
+        "下载前的产品相关问题",
+        "品牌或合作介绍",
+        "网站和内容纠错"
+      ],
+      "simplePurpose": "为什么这个页面保持简洁",
+      "simplePurposeText": "第一阶段专注于一条主要联系通道，而不是庞大的支持中心，这样既保持网站简洁，又保留了运营灵活性。"
+    }
+  },
+  "Download": {
+    "metadata": {
+      "title": "Download | DreamAI"
+    },
+    "hero": {
+      "eyebrow": "Download",
+      "title": "下载 DreamAI",
+      "description": "DreamAI 现已在 iOS App Store 上线。选择最适合你的工作流，下载应用，开始将你的创意转化为视频。"
+    },
+    "aside": {
+      "label": "下载重点",
+      "items": ["App Store 转化", "产品教育", "未来平台扩展"]
+    },
+    "features": [
+      "移动优先体验",
+      "API 驱动内容",
+      "预留 CMS 扩展"
+    ],
+    "cards": {
+      "platform": {
+        "title": "Current platform",
+        "headline": "iOS 优先",
+        "description": "The website is optimized for iOS. Visit dreamlog.com on your iPhone to get the best experience."
+      },
+      "role": {
+        "title": "Website role",
+        "headline": "转化入口",
+        "description": "The website is for product discovery and brand storytelling, while video generation happens inside the iOS app."
+      },
+      "future": {
+        "title": "Future-ready",
+        "headline": "更多平台即将支持",
+        "description": "The content system behind the site is designed to grow with new platforms as the product expands."
+      }
+    }
+  },
+  "FAQ": {
+    "metadata": {
+      "title": "FAQ | DreamAI"
+    }
+  },
+  "Features": {
+    "metadata": {
+      "title": "Features | DreamAI"
+    }
+  },
+  "Blog": {
+    "metadata": {
+      "title": "Blog | DreamAI"
+    },
+    "title": "博客与产品笔记"
+  },
+  "BlogPost": {
+    "metadata": {
+      "title": "{title} | DreamAI"
+    },
+    "eyebrow": "博客",
+    "defaultDescription": "DreamAI 团队的产品笔记、发布背景和定位详情。",
+    "aside": {
+      "label": "文章信息",
+      "published": "发布时间",
+      "status": "状态"
+    },
+    "readingNote": {
+      "title": "阅读提示",
+      "description": "博客定位为轻量级内容层，承载发布、更新和产品定位，由驱动官网的同一内容 API 提供支持。"
+    }
+  },
+  "HeroSection": {
+    "badge": "DreamAI",
+    "ctaPrimary": "在 App Store 下载",
+    "ctaSecondary": "浏览功能",
+    "pills": [
+      "文字驱动的创意构想",
+      "运动意图",
+      "商业叙事"
+    ],
+    "preview": "Product preview",
+    "flows": [
+      "文字生成视频概念",
+      "图片驱动运动",
+      "首尾帧控制",
+      "商业叙事"
+    ],
+    "flowPrefix": "工作流",
+    "phaseEyebrow": "Website Phase One",
+    "phaseTitle": "品牌叙事、功能介绍和 App Store 转化。"
+  },
+  "ScenarioStrip": {
+    "scenarios": [
+      {
+        "title": "内容创作者",
+        "description": "快速从想法生成视频概念稿，验证创意方向再进入完整制作流程。"
+      },
+      {
+        "title": "电商商家",
+        "description": "为产品页面和营销活动生成高质量商品展示视频。"
+      },
+      {
+        "title": "品牌团队",
+        "description": "探索更丰富的视觉语言和叙事节奏，为活动素材提供快速草稿。"
+      }
+    ]
+  },
+  "MetricsBand": {
+    "metrics": [
+      {
+        "label": "生成模式",
+        "value": "5"
+      },
+      {
+        "label": "平台覆盖",
+        "value": "iOS"
+      },
+      {
+        "label": "内容语言",
+        "value": "中文·英文"
+      },
+      {
+        "label": "网站版本",
+        "value": "Phase 1"
+      }
+    ]
+  },
+  "ShowcasePanel": {
+    "eyebrow": "产品视图",
+    "title": "让网站更贴近产品体验",
+    "description": "不只是功能列表——DreamAI 官网的设计目标是让访客在下载之前就能直观感受产品的能力。",
+    "canvas": "工作流画布",
+    "creativeFlows": "DreamAI 创作流程",
+    "phase": "Phase One"
+  },
+  "FeatureGrid": {
+    "eyebrow": "Capabilities",
+    "title": "内容优先的特性展示",
+    "description": "每个功能模块都由动态的站点配置 API 驱动，保持展示内容始终是最新的。",
+    "live": "Live"
+  },
+  "DownloadPanel": {
+    "eyebrow": "下载",
+    "title": "将 DreamAI 下载到你的设备上",
+    "description": "选择一个平台开始。下载链接通过站点管理面板动态更新。",
+    "features": ["移动优先体验", "API 驱动内容", "预留 CMS 扩展"]
+  },
+  "FAQList": {
+    "eyebrow": "常见问题",
+    "title": "快速了解 DreamAI",
+    "description": "产品概览、创作工作流和支持渠道的简明回答。"
+  },
+  "PostGrid": {
+    "eyebrow": "博客",
+    "title": "最新动态",
+    "description": "产品更新、发布和定位笔记的轻量内容系统。",
+    "readArticle": "阅读文章"
+  },
+  "format": {
+    "role_admin": "管理员",
+    "role_user": "普通用户",
+    "role_svip": "SVIP",
+    "role_vip": "VIP",
+    "role_guest": "访客",
+    "role_unknown": "未知"
+  }
+}
