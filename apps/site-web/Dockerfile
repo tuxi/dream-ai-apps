@@ -24,7 +24,7 @@ ENV NEXT_PUBLIC_SITE_API_BASE_URL=$NEXT_PUBLIC_SITE_API_BASE_URL
 ENV NEXT_PUBLIC_OSS_HOST=$NEXT_PUBLIC_OSS_HOST
 
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN mkdir -p /app/public && npm run build
 
 # ---- runner ----
 FROM node:20-alpine AS runner
