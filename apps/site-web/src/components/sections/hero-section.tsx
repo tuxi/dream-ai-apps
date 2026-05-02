@@ -15,7 +15,7 @@ export function HeroSection({
     <section className="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:py-28">
       <div className="relative">
         <div className="inline-flex rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm font-medium text-accent">
-          DreamAI by Dreamlog
+          DreamAI
         </div>
         <h1 className="mt-6 text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
           {config.hero_title}

@@ -18,12 +18,25 @@ export default function PrivacyPage() {
 
         <div className="rounded-[2rem] border border-line bg-white/90 p-8 space-y-4">
           <p>
-            Dreamlog（以下简称"我们"）深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。本隐私政策适用于您使用 DreamAI 应用程序（以下简称"本应用"或"服务"）的全部场景。
+            本应用开发者（以下简称"我们"），作为本服务的个人信息处理者，深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。本隐私政策适用于您使用 DreamAI 应用程序（以下简称"本应用"或"服务"）的全部场景。
           </p>
           <p>
-            请您在使用本服务前仔细阅读本隐私政策。如您继续使用本服务，即表示您已充分理解并同意本政策的全部内容。
+            <strong>请您在使用本服务前仔细阅读本隐私政策的全部内容。</strong>如您继续使用本服务，即表示您已充分理解并同意本政策的全部内容。如您不同意本政策的任何内容，请立即停止使用本服务。
+          </p>
+          <p>
+            本隐私政策依据《中华人民共和国个人信息保护法》（以下简称"《个保法》"）、《中华人民共和国网络安全法》（以下简称"《网络安全法》"）、《中华人民共和国数据安全法》（以下简称"《数据安全法》"）及相关法律法规制定，并遵循合法、正当、必要和诚信原则处理您的个人信息。
           </p>
         </div>
+
+        <Section title="个人信息处理者信息">
+          <div className="rounded-[1.5rem] bg-mist px-6 py-5 space-y-2">
+            <p><strong>个人信息处理者：</strong>本应用开发者（个人）</p>
+            <p><strong>处理目的与方式：</strong>详见本政策第二条"信息的使用目的"</p>
+            <p><strong>处理的信息种类：</strong>详见本政策第一条"我们收集的信息"</p>
+            <p><strong>保存期限：</strong>详见本政策第六条"数据保留期限"</p>
+            <p><strong>个人行使权利的方式：</strong>详见本政策第七条"您的权利"，您可随时通过 support@dreamlog.com 联系我们行使法定权利</p>
+          </div>
+        </Section>
 
         <Section title="一、我们收集的信息">
           <SubSection title="1.1 您主动提供的信息">
@@ -48,18 +61,28 @@ export default function PrivacyPage() {
           </SubSection>
         </Section>
 
-        <Section title="二、信息的使用目的">
-          <p>我们收集的信息仅用于以下目的：</p>
-          <ul className="list-disc pl-5 space-y-2 mt-4">
-            <li>提供、维护和改善 DreamAI 的 AI 视频生成服务；</li>
-            <li>处理您的 AI 生成任务并返回结果；</li>
-            <li>管理您的账号、订阅状态和积分余额；</li>
-            <li>向您发送与服务相关的通知（如任务完成、账单提醒）；</li>
-            <li>分析产品使用情况，优化用户体验；</li>
-            <li>检测和防范欺诈、滥用及安全威胁；</li>
-            <li>履行法律法规要求的义务。</li>
-          </ul>
-          <p className="mt-4">我们不会将您的个人信息用于与上述目的无关的其他用途，也不会基于您的信息向您推送与服务无关的广告。</p>
+        <Section title="二、信息处理的合法性基础与使用目的">
+          <SubSection title="2.1 处理的合法性基础">
+            <p>根据《个保法》第十三条，我们基于以下合法性基础处理您的个人信息：</p>
+            <ul className="list-disc pl-5 space-y-2 mt-3">
+              <li><strong>履行合同所必需：</strong>为向您提供本服务及履行您与我们之间的服务协议，处理您的账号信息、生成任务数据和支付记录；</li>
+              <li><strong>取得您的同意：</strong>对于非提供服务所必需的数据处理（如使用情况分析），我们在处理前取得您的授权同意；</li>
+              <li><strong>法定义务：</strong>为履行网络安全、财务税务等法律规定的义务所必需的数据处理。</li>
+            </ul>
+          </SubSection>
+          <SubSection title="2.2 信息使用的具体目的">
+            <p>我们收集的信息仅用于以下目的：</p>
+            <ul className="list-disc pl-5 space-y-2 mt-3">
+              <li>提供、维护和改善 DreamAI 的 AI 视频生成服务；</li>
+              <li>处理您的 AI 生成任务并返回结果；</li>
+              <li>管理您的账号、订阅状态和积分余额；</li>
+              <li>向您发送与服务相关的通知（如任务完成、账单提醒）；</li>
+              <li>分析产品使用情况，优化用户体验（基于您的同意）；</li>
+              <li>检测和防范欺诈、滥用及安全威胁；</li>
+              <li>履行法律法规要求的义务。</li>
+            </ul>
+            <p className="mt-4">我们不会将您的个人信息用于与上述目的无关的其他用途，也不会基于您的信息向您推送与服务无关的广告。</p>
+          </SubSection>
         </Section>
 
         <Section title="三、AI 生成内容与您的数据">
@@ -82,20 +105,26 @@ export default function PrivacyPage() {
             <li><strong>服务提供商：</strong>我们委托阿里云等云计算服务商提供基础设施服务，这些服务商在合同约束下处理您的数据，不得将其用于其他目的。</li>
             <li><strong>支付处理：</strong>Apple App Store 负责处理应用内购买，适用 Apple 的隐私政策。</li>
             <li><strong>法律要求：</strong>当法律法规、政府机关或司法机构要求时，我们会依法披露必要信息。</li>
-            <li><strong>安全保护：</strong>为保护用户、公众或 Dreamlog 的合法权益，在必要时披露相关信息。</li>
+            <li><strong>安全保护：</strong>为保护用户、公众或我们的合法权益，在必要时披露相关信息。</li>
             <li><strong>业务转让：</strong>如发生合并、收购或资产出售，用户数据可能作为资产转移，届时我们将提前通知并确保接收方承担等同的隐私保护义务。</li>
           </ul>
         </Section>
 
-        <Section title="五、数据安全">
-          <p>我们采取行业标准的技术和管理措施保护您的个人信息，包括：</p>
-          <ul className="list-disc pl-5 space-y-2 mt-4">
-            <li>数据传输使用 HTTPS/TLS 加密；</li>
-            <li>存储敏感数据时使用加密处理；</li>
-            <li>严格控制内部员工对用户数据的访问权限；</li>
-            <li>定期进行安全审查和漏洞排查。</li>
-          </ul>
-          <p className="mt-4">尽管如此，互联网传输和存储无法保证绝对安全。如发生数据安全事件，我们将按照相关法律法规的要求及时通知您。</p>
+        <Section title="五、数据存储与安全">
+          <SubSection title="5.1 数据本地化">
+            <p>根据《网络安全法》及《个保法》相关规定，我们在中华人民共和国境内收集和产生的个人信息，将存储在中国境内的服务器上。目前我们使用阿里云（aliyun.com）提供的云计算服务，数据存储于中国大陆境内数据中心。</p>
+            <p className="mt-2">如因业务需要确需向境外提供个人信息，我们将根据法律要求取得您的单独同意，并通过国家网信部门组织的安全评估，或与境外接收方订立标准合同等方式确保您的个人信息获得同等保护。</p>
+          </SubSection>
+          <SubSection title="5.2 安全措施">
+            <p>我们采取行业标准的技术和管理措施保护您的个人信息，包括：</p>
+            <ul className="list-disc pl-5 space-y-2 mt-3">
+              <li>数据传输使用 HTTPS/TLS 加密；</li>
+              <li>存储敏感数据时使用加密处理；</li>
+              <li>严格控制内部员工对用户数据的访问权限；</li>
+              <li>定期进行安全审查和漏洞排查。</li>
+            </ul>
+            <p className="mt-4">尽管如此，互联网传输和存储无法保证绝对安全。如发生数据安全事件，我们将按照《个保法》第五十七条的规定及时通知主管部门和您。</p>
+          </SubSection>
         </Section>
 
         <Section title="六、数据保留期限">
@@ -145,7 +174,7 @@ export default function PrivacyPage() {
         <Section title="十一、联系我们">
           <p>如您对本隐私政策有任何疑问、意见或请求，请通过以下方式联系我们：</p>
           <div className="mt-4 rounded-[1.5rem] bg-mist px-6 py-5 space-y-2">
-            <p><strong>公司名称：</strong>Dreamlog</p>
+            <p><strong>开发者：</strong>tuxi</p>
             <p><strong>电子邮件：</strong>support@dreamlog.com</p>
             <p><strong>官网地址：</strong>https://dreamlog.com</p>
           </div>

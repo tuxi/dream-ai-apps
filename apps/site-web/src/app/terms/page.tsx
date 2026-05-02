@@ -18,15 +18,25 @@ export default function TermsPage() {
 
         <div className="rounded-[2rem] border border-line bg-white/90 p-8 space-y-4">
           <p>
-            欢迎使用 DreamAI。本用户服务协议（以下简称"本协议"）由您与 Dreamlog（以下简称"我们"）共同签订，适用于您使用 DreamAI 应用程序及相关服务（以下统称"本服务"）的全部行为。
+            欢迎使用 DreamAI。本用户服务协议（以下简称"本协议"）由您与本应用开发者（以下简称"我们"）共同签订，适用于您使用 DreamAI 应用程序及相关服务（以下统称"本服务"）的全部行为。
           </p>
           <p>
             <strong>请在使用本服务前仔细阅读本协议的全部内容。</strong>当您点击"同意"、完成注册或开始使用本服务时，即表示您已阅读、理解并同意接受本协议的约束。如您不同意本协议的任何条款，请立即停止使用本服务。
           </p>
         </div>
 
+        <Section title="协议签订主体">
+          <p>本协议由以下双方签订：</p>
+          <div className="mt-4 rounded-[1.5rem] bg-mist px-6 py-5 space-y-2">
+            <p><strong>服务提供方：</strong>本应用开发者（个人，本站 ICP 备案主体）</p>
+            <p><strong>服务使用方：</strong>注册或使用本服务、且具备完全民事行为能力的自然人、法人或其他组织</p>
+            <p className="mt-3 text-xs text-slate-500">如您是未成年人，须在监护人的监督下使用，并由监护人代为接受本协议。</p>
+          </div>
+        </Section>
+
         <Section title="一、服务说明">
-          <p>DreamAI 是由 Dreamlog 开发和运营的 AI 视频生成工具，主要功能包括：</p>
+          <p>本协议依据《中华人民共和国民法典》《中华人民共和国网络安全法》《中华人民共和国个人信息保护法》《中华人民共和国电子商务法》等法律法规制定。</p>
+          <p className="mt-4">DreamAI 是由个人开发者开发并运营的 AI 视频生成工具，主要功能包括：</p>
           <ul className="list-disc pl-5 space-y-2 mt-4">
             <li>文字生成视频（Text-to-Video）</li>
             <li>图片生成视频（Image-to-Video）</li>
@@ -90,10 +100,10 @@ export default function TermsPage() {
           </SubSection>
           <SubSection title="5.2 AI 生成结果">
             <p>通过本服务生成的视频内容，在您遵守本协议的前提下，您享有对该内容的使用权，可用于个人创作、分享及商业用途（除本协议禁止的情形外）。</p>
-            <p className="mt-2">您理解并同意：AI 生成内容的最终权属认定受不同国家和地区法律管辖的影响，Dreamlog 不对生成内容的版权归属作出任何明确的法律承诺。</p>
+            <p className="mt-2">您理解并同意：AI 生成内容的最终权属认定受不同国家和地区法律管辖的影响，我们不对生成内容的版权归属作出任何明确的法律承诺。</p>
           </SubSection>
           <SubSection title="5.3 我们的权利">
-            <p>DreamAI 及本服务中的所有技术、算法、界面、商标、品牌形象等均为 Dreamlog 的知识产权，受法律保护。您不得以任何形式复制、仿制或侵犯上述权利。</p>
+            <p>DreamAI 及本服务中的所有技术、算法、界面、商标、品牌形象等均为我们的知识产权，受法律保护。您不得以任何形式复制、仿制或侵犯上述权利。</p>
           </SubSection>
         </Section>
 
@@ -105,7 +115,7 @@ export default function TermsPage() {
             <p>订阅服务将在到期前 24 小时自动续费，除非您在此之前主动取消。您可在 iPhone「设置 → Apple ID → 订阅」中管理或取消订阅。</p>
           </SubSection>
           <SubSection title="6.3 退款政策">
-            <p>退款申请须通过 Apple App Store 提交，Dreamlog 不直接处理退款。已使用的积分不予退还。如因本服务的技术故障导致无法使用，我们将酌情予以补偿。</p>
+            <p>退款申请须通过 Apple App Store 提交，我们不直接处理退款。已使用的积分不予退还。如因本服务的技术故障导致无法使用，我们将酌情予以补偿。</p>
           </SubSection>
         </Section>
 
@@ -122,7 +132,7 @@ export default function TermsPage() {
             <p>AI 生成内容由算法自动产生，我们不保证其准确性、合法性或适用性。您使用生成内容所承担的风险和法律责任由您自行负担。我们建议您在公开发布 AI 生成内容时，遵守相关平台的 AI 内容披露要求。</p>
           </SubSection>
           <SubSection title="7.3 责任限制">
-            <p>在适用法律允许的最大范围内，Dreamlog 对因使用本服务产生的间接损失、利润损失、数据损失不承担责任。我们对您的最大赔偿责任不超过您在索赔发生前 12 个月内向我们支付的费用总额。</p>
+            <p>在适用法律允许的最大范围内，我们对因使用本服务产生的间接损失、利润损失、数据损失不承担责任。我们对您的最大赔偿责任不超过您在索赔发生前 12 个月内向我们支付的费用总额。</p>
           </SubSection>
         </Section>
 
@@ -145,14 +155,21 @@ export default function TermsPage() {
         </Section>
 
         <Section title="十、适用法律与争议解决">
-          <p>本协议的订立、执行和解释均适用中华人民共和国法律（不包括冲突法规则）。</p>
-          <p className="mt-4">如因本协议或本服务产生争议，双方应首先通过友好协商解决。协商不成的，任何一方均可向 Dreamlog 注册地有管辖权的人民法院提起诉讼。</p>
+          <p>本协议的订立、生效、履行、解释及争议解决均适用中华人民共和国法律（不包括冲突法规则，但《中华人民共和国涉外民事关系法律适用法》另有规定的除外）。</p>
+
+          <SubSection title="10.1 争议解决方式">
+            <p>如因本协议或本服务产生任何争议，双方应首先通过友好协商解决。您可通过 support@dreamlog.com 与我们沟通。协商不成的，任何一方均有权向开发者住所地有管辖权的人民法院提起诉讼。</p>
+          </SubSection>
+
+          <SubSection title="10.2 协议部分无效的处理">
+            <p>如本协议的任何条款被有管辖权的法院或行政主管部门认定为无效、不合法或不可执行，其余条款的效力不受影响，双方应尽最大诚意以合法有效的条款替代被认定无效的条款，以最接近原条款的意图实现双方的合同目的。</p>
+          </SubSection>
         </Section>
 
         <Section title="十一、联系我们">
           <p>如您对本协议有任何疑问或需要帮助，请通过以下方式联系我们：</p>
           <div className="mt-4 rounded-[1.5rem] bg-mist px-6 py-5 space-y-2">
-            <p><strong>公司名称：</strong>Dreamlog</p>
+            <p><strong>开发者：</strong>tuxi</p>
             <p><strong>电子邮件：</strong>support@dreamlog.com</p>
             <p><strong>官网地址：</strong>https://dreamlog.com</p>
           </div>

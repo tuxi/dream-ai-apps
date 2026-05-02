@@ -10,9 +10,9 @@ import {
 const now = Math.floor(Date.now() / 1000)
 
 export const fallbackSiteConfig: SiteConfig = {
-  brand_name: "Dreamlog",
+  brand_name: "DreamAI",
   app_name: "DreamAI",
-  site_title: "DreamAI | AI Video Generator by Dreamlog",
+  site_title: "DreamAI | AI Video Generator",
   site_subtitle:
     "Create video ideas, motion shots, and commerce-ready storytelling from a single mobile workflow.",
   hero_title: "AI video creation for creators, brands, and merchants.",
@@ -23,8 +23,8 @@ export const fallbackSiteConfig: SiteConfig = {
   secondary_cta_text: "Explore Features",
   secondary_cta_link: "/features",
   contact_email: "support@dreamlog.com",
-  footer_text: "DreamAI is a product by Dreamlog.",
-  seo_title: "DreamAI | AI Video Generator by Dreamlog",
+  footer_text: "DreamAI — AI video creation, built by an indie developer.",
+  seo_title: "DreamAI | AI Video Generator",
   seo_description:
     "Discover DreamAI's text-to-video, image-to-video, motion control, and commerce video workflows.",
 }

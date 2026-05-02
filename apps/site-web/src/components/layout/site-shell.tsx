@@ -43,12 +43,25 @@ export function SiteShell({
       </header>
       <main className="overflow-hidden">{children}</main>
       <footer className="border-t border-line/80 bg-white/70">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-10 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
-          <p>{config.footer_text || `${config.app_name} is a product by ${config.brand_name}.`}</p>
-          <div className="flex gap-4">
-            <Link href="/privacy">Privacy</Link>
-            <Link href="/terms">Terms</Link>
-            <Link href="/contact">Contact</Link>
+        <div className="mx-auto max-w-6xl px-6 py-10">
+          <div className="flex flex-col gap-3 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
+            <p>{config.footer_text || `${config.app_name} is a product by ${config.brand_name}.`}</p>
+            <div className="flex gap-4">
+              <Link href="/privacy">Privacy</Link>
+              <Link href="/terms">Terms</Link>
+              <Link href="/contact">Contact</Link>
+              <a href="https://github.com/tuxi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+          <div className="mt-6 border-t border-line/50 pt-5 text-center">
+            <a
+              href="https://beian.miit.gov.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-400 transition hover:text-slate-600"
+            >
+              京ICP备19030687号
+            </a>
           </div>
         </div>
       </footer>
