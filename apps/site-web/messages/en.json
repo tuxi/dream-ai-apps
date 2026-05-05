@@ -11,20 +11,19 @@
     "footer": {
       "privacy": "Privacy",
       "terms": "Terms",
+      "algorithmDisclosure": "Algorithm Disclosure",
       "contact": "Contact",
       "github": "GitHub",
       "icp": "京ICP备19030687号",
       "by": "by"
     }
   },
-
   "Home": {
     "metadata": {
       "title": "DreamAI | AI Video Generator"
     },
     "postGridTitle": "Fresh from the DreamAI team"
   },
-
   "About": {
     "metadata": {
       "title": "About | DreamAI",
@@ -81,7 +80,6 @@
       "terms": "Terms of Service"
     }
   },
-
   "Privacy": {
     "metadata": {
       "title": "Privacy Policy | DreamAI",
@@ -99,7 +97,6 @@
       "p3": "This Privacy Policy is formulated in accordance with the Personal Information Protection Law of the People's Republic of China (\"PIPL\"), the Cybersecurity Law of the People's Republic of China, the Data Security Law of the People's Republic of China, and other relevant laws and regulations, and follows the principles of lawfulness, fairness, necessity, and good faith in processing your personal information."
     }
   },
-
   "Terms": {
     "metadata": {
       "title": "Terms of Service | DreamAI",
@@ -116,7 +113,6 @@
       "p2_rest": "By clicking \"Agree\", completing registration, or starting to use the Service, you confirm that you have read, understood, and agree to be bound by this Agreement. If you disagree with any terms, please stop using the Service immediately."
     }
   },
-
   "Contact": {
     "metadata": {
       "title": "Contact | DreamAI"
@@ -145,7 +141,6 @@
       "simplePurposeText": "Phase one is focused on a strong primary route instead of a sprawling support center, which keeps the site crisp while preserving operational flexibility."
     }
   },
-
   "Download": {
     "metadata": {
       "title": "Download | DreamAI"
@@ -157,7 +152,11 @@
     },
     "aside": {
       "label": "Launch focus",
-      "items": ["App Store conversion", "Product education", "Future platform expansion"]
+      "items": [
+        "App Store conversion",
+        "Product education",
+        "Future platform expansion"
+      ]
     },
     "features": [
       "Mobile-first experience",
@@ -182,26 +181,22 @@
       }
     }
   },
-
   "FAQ": {
     "metadata": {
       "title": "FAQ | DreamAI"
     }
   },
-
   "Features": {
     "metadata": {
       "title": "Features | DreamAI"
     }
   },
-
   "Blog": {
     "metadata": {
       "title": "Blog | DreamAI"
     },
     "title": "Blog and product notes"
   },
-
   "BlogPost": {
     "metadata": {
       "title": "{title} | DreamAI"
@@ -218,19 +213,26 @@
       "description": "The blog is designed as a lightweight content layer for launches, updates, and product positioning, backed by the same content API that drives the public site."
     }
   },
-
   "HeroSection": {
     "badge": "DreamAI",
     "ctaPrimary": "Download on the App Store",
     "ctaSecondary": "Explore Features",
-    "pills": ["Text-led ideation", "Motion intent", "Commerce storytelling"],
+    "pills": [
+      "Text-led ideation",
+      "Motion intent",
+      "Commerce storytelling"
+    ],
     "preview": "Product preview",
-    "flows": ["Text to video concepts", "Image-led motion", "Start/end frame control", "Commerce storytelling"],
+    "flows": [
+      "Text to video concepts",
+      "Image-led motion",
+      "Start/end frame control",
+      "Commerce storytelling"
+    ],
     "flowPrefix": "Flow",
     "phaseEyebrow": "Website Phase One",
     "phaseTitle": "Brand storytelling, feature education, and App Store conversion."
   },
-
   "ScenarioStrip": {
     "scenarios": [
       {
@@ -247,16 +249,26 @@
       }
     ]
   },
-
   "MetricsBand": {
     "metrics": [
-      { "label": "Generation modes", "value": "5" },
-      { "label": "Platforms", "value": "iOS" },
-      { "label": "Languages", "value": "ZH·EN" },
-      { "label": "Site version", "value": "Phase 1" }
+      {
+        "label": "Generation modes",
+        "value": "5"
+      },
+      {
+        "label": "Platforms",
+        "value": "iOS"
+      },
+      {
+        "label": "Languages",
+        "value": "ZH·EN"
+      },
+      {
+        "label": "Site version",
+        "value": "Phase 1"
+      }
     ]
   },
-
   "ShowcasePanel": {
     "eyebrow": "Product View",
     "title": "A website that feels closer to the product",
@@ -265,34 +277,33 @@
     "creativeFlows": "DreamAI creative flows",
     "phase": "Phase One"
   },
-
   "FeatureGrid": {
     "eyebrow": "Capabilities",
     "title": "Content-first feature showcase",
     "description": "Each feature module is driven by the dynamic site config API, keeping the showcase always up to date.",
     "live": "Live"
   },
-
   "DownloadPanel": {
     "eyebrow": "Download",
     "title": "Get DreamAI on your device",
     "description": "Pick a platform to get started. Download links are updated dynamically through the site admin panel.",
-    "features": ["Mobile-first experience", "API-driven content", "Ready for CMS extension"]
+    "features": [
+      "Mobile-first experience",
+      "API-driven content",
+      "Ready for CMS extension"
+    ]
   },
-
   "FAQList": {
     "eyebrow": "FAQ",
     "title": "Get to know DreamAI",
     "description": "Concise answers covering product overview, creative workflows, and support channels."
   },
-
   "PostGrid": {
     "eyebrow": "Blog",
     "title": "Latest updates",
     "description": "Use the blog as a lightweight content system for product updates, launches, and positioning notes.",
     "readArticle": "Read article"
   },
-
   "ContentPolicy": {
     "metadata": {
       "title": "Content Policy | DreamAI",
@@ -314,5 +325,175 @@
     "role_vip": "VIP",
     "role_guest": "Guest",
     "role_unknown": "Unknown"
+  },
+  "AlgorithmDisclosure": {
+    "metadata": {
+      "title": "Algorithm Disclosure | DreamAI",
+      "description": "DreamAI Algorithm Disclosure — Information about registered AI algorithm services used by this product, ensuring user right to know and supervision."
+    },
+    "header": {
+      "eyebrow": "Legal",
+      "title": "Algorithm Disclosure",
+      "lastUpdated": "Last updated: May 5, 2026"
+    },
+    "intro": {
+      "p1": "To standardize the application of AI algorithm services and protect users' right to know, participate, and supervise, in accordance with relevant laws and regulations, this App discloses the following information regarding registered AI algorithm services for public and user supervision. (The full text of this disclosure is provided in Chinese as it is a legal document governed by PRC regulations.)"
+    },
+    "section1": {
+      "title": "I. Basic Algorithm Service Information",
+      "description": "All AI algorithms used by this App have been registered with the Cyberspace Administration of China. You may verify this via the official registration system (https://beian.cac.gov.cn). The following information is current as of May 5, 2026 and is updated in real time along with regulatory disclosures.",
+      "label": {
+        "name": "Algorithm Name",
+        "record_no": "Registration No.",
+        "type": "Algorithm Type",
+        "provider": "Service Provider"
+      },
+      "item1": {
+        "name": "(1) Doubao LLM Algorithm",
+        "algorithm_name": "豆包大模型算法",
+        "record_no": "网信算备110108823483901230031号",
+        "type": "Generative/Synthesis (LLM, Deep Synthesis Service)",
+        "provider": "Beijing Douyin Information Service Co., Ltd."
+      },
+      "item2": {
+        "name": "(2) DeepSeek LLM Algorithm",
+        "algorithm_name": "DeepSeek 大语言模型算法",
+        "record_no": "网信算备110108443622101230025号",
+        "type": "Generative/Synthesis (LLM, Deep Synthesis Service)",
+        "provider": "Beijing DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd."
+      },
+      "item3": {
+        "name": "(3) Volcano Engine Text-to-Speech Algorithm",
+        "algorithm_name": "火山引擎文本转语音算法",
+        "record_no": "网信算备110108823483901230057号",
+        "type": "Generative/Synthesis (Speech Generation, Deep Synthesis Service)",
+        "provider": "Beijing Douyin Information Service Co., Ltd."
+      },
+      "item4": {
+        "name": "(4) Volcano Engine Virtual Digital Human Algorithm",
+        "algorithm_name": "火山引擎虚拟数字人算法",
+        "record_no": "网信算备110108823483901230049号",
+        "type": "Generative/Synthesis (Video Production, Deep Synthesis Service)",
+        "provider": "Beijing Douyin Information Service Co., Ltd."
+      },
+      "item5": {
+        "name": "(5) Kling AI Model Algorithm",
+        "algorithm_name": "快手可灵大模型生成合成算法",
+        "record_no": "网信算备110108413760701250055号",
+        "type": "Generative/Synthesis (Video Generation, Deep Synthesis Service)",
+        "provider": "Beijing Kuaishou Technology Co., Ltd."
+      },
+      "item6": {
+        "name": "(6) DAMO Academy Image Synthesis Algorithm",
+        "algorithm_name": "达摩院图像合成算法",
+        "record_no": "网信算备330110507206401230027号",
+        "type": "Generative/Synthesis (Image Generation, Deep Synthesis Service)",
+        "provider": "Alibaba DAMO Academy (Hangzhou) Technology Co., Ltd."
+      }
+    },
+    "section2": {
+      "title": "II. Basic Algorithm Principles",
+      "description": "(See Chinese original for full technical descriptions of each algorithm's principles under the Deep Synthesis regulatory framework.)",
+      "item1": {
+        "name": "(1) Doubao LLM Algorithm",
+        "text": "The Doubao LLM is a Transformer-architecture language model that generates text by predicting the next most probable token from preceding context. It employs RLHF (Reinforcement Learning from Human Feedback) to align outputs with user instructions while performing compliance verification on generated content, in accordance with deep synthesis service regulatory requirements."
+      },
+      "item2": {
+        "name": "(2) DeepSeek LLM Algorithm",
+        "text": "DeepSeek's generative synthesis algorithm is based on Transformer architecture and large-scale pre-training technology. Through learning from massive compliant text data, it enables intelligent dialogue, text generation, content understanding, and information summarization. The algorithm uses supervised fine-tuning and RLHF to optimize output quality, with full content safety and compliance review throughout the process, ensuring generated text is lawful, healthy, and traceable in accordance with deep synthesis service management requirements."
+      },
+      "item3": {
+        "name": "(3) Volcano Engine Text-to-Speech Algorithm",
+        "text": "This algorithm converts input text into corresponding speech signals by combining acoustic and language models. It predicts Mel spectrograms from linguistic features extracted from text, processes them through stacked Transformer and CNN layers, and outputs natural, fluent speech. Deep learning optimization and stability evaluation ensure synthesis quality and regulatory compliance."
+      },
+      "item4": {
+        "name": "(4) Volcano Engine Virtual Digital Human Algorithm",
+        "text": "This deep synthesis service algorithm leverages computer graphics, motion capture, speech synthesis, and AI-driven technologies to build virtual digital humans with anthropomorphic appearance, motion, and interaction capabilities. Generated video and interactive content are prominently labeled as AI-generated to prevent technology misuse."
+      },
+      "item5": {
+        "name": "(5) Kling AI Model Algorithm",
+        "text": "Kling is a multimodal temporal diffusion model for video generation. It extracts visual and temporal features from user text descriptions and image materials to produce coherent, high-quality video content. Generated video includes digital watermarks (SynthID or similar) and visible labels for regulatory compliance."
+      },
+      "item6": {
+        "name": "(6) DAMO Academy Image Synthesis Algorithm",
+        "text": "This algorithm extracts key visual features from user text descriptions or image inputs and uses diffusion model technology to generate compliant, high-quality images. Generated images include digital watermarks (SynthID or similar) and visible labels identifying them as AI-generated, in compliance with relevant regulations."
+      }
+    },
+    "section3": {
+      "title": "III. Algorithm Operation Mechanisms",
+      "description": "(See Chinese original for detailed step-by-step operation mechanisms. All generated audio/video/image content contains invisible digital watermarks and visible identifiers to prevent technology misuse.)",
+      "item1": {
+        "name": "(1) Doubao LLM Operation",
+        "step1": "Pre-training: Large-scale unsupervised learning on massive compliant corpora to master natural language grammar, semantics, and knowledge, building a foundational language model.",
+        "step2": "Fine-tuning: Supervised training combined with scenario requirements to align the model with user instructions for the App's specific use cases.",
+        "step3": "RLHF: Human feedback data is used to optimize model outputs, eliminating non-compliant or inaccurate content and improving output quality.",
+        "step4": "Inference: Real-time processing of user instructions, leveraging pre-trained knowledge and fine-tuned scenario adaptation to generate compliant responses without storing unrelated user information."
+      },
+      "item2": {
+        "name": "(2) DeepSeek LLM Operation",
+        "step1": "Input Parsing: Perform intent recognition and content analysis on user input text, extracting core requirements.",
+        "step2": "Model Inference: Generate instruction-compliant text content using pre-trained and fine-tuned models.",
+        "step3": "Compliance Review: Conduct safety audits and sensitive information filtering on generated content to ensure compliance.",
+        "step4": "Output: Return compliant text without storing unnecessary user data, ensuring privacy protection."
+      },
+      "item3": {
+        "name": "(3) Volcano Engine TTS Operation",
+        "step1": "Input Parsing: Receive authorized text content from the user, extract linguistic features, and identify core information required for speech synthesis.",
+        "step2": "Model Generation: Predict Mel spectrograms using acoustic and language models, then convert text features into speech signals through stacked Transformer and CNN layers.",
+        "step3": "Optimization: Apply deep learning to enhance fluency and naturalness while performing compliance checks to ensure no violations.",
+        "step4": "Output: Return optimized speech to the user and clear temporary data generated during the process to protect user data security."
+      },
+      "item4": {
+        "name": "(4) Volcano Engine Digital Human Operation",
+        "step1": "Input Parsing: Receive user inputs regarding appearance, motion, and interaction requirements for the virtual digital human, extracting core features and parameters.",
+        "step2": "Model Generation: Build the virtual digital human through graphics modeling and motion-driven models, combined with speech synthesis for coordinated motion and speech.",
+        "step3": "Optimization & Review: Refine appearance details and motion smoothness, perform compliance checks, and add AI-generated identifiers.",
+        "step4": "Output: Return the compliant virtual digital human and related content to the user, then clear temporary data to ensure data security and compliance."
+      },
+      "item5": {
+        "name": "(5) Kling AI Operation",
+        "step1": "Input Parsing: Analyze user text descriptions and image materials to extract core requirements such as video theme, scene, and style.",
+        "step2": "Temporal Generation: Generate coherent video frames through the multimodal temporal diffusion model to construct complete video content.",
+        "step3": "Optimization & Review: Enhance video quality and smoothness while performing compliance checks, adding digital watermarks and visible identifiers.",
+        "step4": "Output: Return the reviewed and approved video to the user, then clear temporary data to ensure data security."
+      },
+      "item6": {
+        "name": "(6) DAMO Academy Image Synthesis Operation",
+        "step1": "Input Parsing: Identify user text descriptions or image inputs and extract visual features and creative requirements.",
+        "step2": "Model Generation: Generate images through the diffusion model, optimizing details and quality to ensure the image matches the user description.",
+        "step3": "Compliance Review: Perform violation checks on generated images and add digital watermarks and visible identifiers for regulatory compliance.",
+        "step4": "Output: Return compliant images and clear temporary data to protect user data security."
+      }
+    },
+    "section4": {
+      "title": "IV. Algorithm Application Scenarios",
+      "description": "This App uses the relevant AI algorithms strictly within the registered scope, only for the following lawful and compliant scenarios, without exceeding the registered purposes or scope. All generated content is labeled as required by relevant regulations:",
+      "item1": "Doubao LLM: Used for intelligent Q&A, user request processing, copy generation, information retrieval and summarization within the App.",
+      "item2": "DeepSeek LLM: Used for intelligent dialogue, text generation, content creation, information summarization, and Q&A assistance within the App.",
+      "item3": "Volcano Engine TTS: Used to provide users with high-fidelity, personalized audio synthesis services across multiple languages and styles for scenarios such as audio books, short video dubbing, and content broadcasting.",
+      "item4": "Volcano Engine Virtual Digital Human: Used for virtual digital human creation and interaction services within the App, suitable for virtual broadcasting, virtual companionship, and scenario demonstrations.",
+      "item5": "Kling AI: Dedicated to video creation within the App, providing text-to-video and image-to-video services with digital watermarks and visible identifiers.",
+      "item6": "DAMO Academy Image Synthesis: Used for image creation within the App, supporting text-to-image generation for virtual world building, AR scenes, and artwork creation, with digital watermarks and visible identifiers."
+    },
+    "section5": {
+      "title": "V. Algorithm Purpose and Intent",
+      "item1": "Through the Doubao LLM and DeepSeek LLM, improve information access efficiency, expand knowledge boundaries, and provide users with convenient, accurate intelligent interaction and text generation services.",
+      "item2": "Through the Volcano Engine TTS algorithm, provide users with audio consumption as an alternative to reading, or dubbing for text-image-video content, enhancing ease of use.",
+      "item3": "Through the Volcano Engine Virtual Digital Human algorithm and Kling AI, lower the barriers to video creation and virtual digital human-related creation, enriching the user's creative experience.",
+      "item4": "Through the DAMO Academy Image Synthesis algorithm, provide users with efficient image generation services, improving interaction experience and creative efficiency.",
+      "item5": "Strictly comply with relevant laws, regulations, and regulatory requirements, promoting compliant and orderly application of AI technology while protecting users' lawful rights and public interests."
+    },
+    "section6": {
+      "title": "VI. Compliance Statement and User Rights",
+      "item1": "All AI algorithms used by this App have been registered with the Cyberspace Administration of China. Registration information can be verified at the official registration system (https://beian.cac.gov.cn). The App operates in strict compliance with relevant laws and regulations, regularly auditing and verifying algorithm mechanisms, models, data, and application results.",
+      "item2": "Users have the right to know about the disclosed information of the AI algorithms used by this App and to provide feedback or complaints regarding non-compliant or inaccurate algorithm operations.",
+      "item3": "This App maintains convenient user feedback and complaint channels with valid, effective contact information, clear processing procedures, and response timelines to promptly handle user issues and provide feedback results.",
+      "item4": "This App strictly protects user personal information, transmitting only necessary input content to AI models without collecting or storing additional personal information, in compliance with relevant data protection and privacy regulations."
+    },
+    "section7": {
+      "title": "VII. Disclosure Updates and Contact Information",
+      "p1": "This algorithm disclosure will be updated in a timely manner according to algorithm registration information, regulatory requirements, and algorithm optimization. Updates will be prominently displayed within the App to ensure users are promptly informed. Content identification standards will be updated concurrently to meet the latest regulatory requirements.",
+      "p2": "If users have questions, suggestions, or complaints regarding this algorithm disclosure, please contact us at: support@dreamlog.com"
+    }
   }
 }

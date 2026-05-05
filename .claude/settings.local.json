@@ -32,7 +32,22 @@
       "Bash(npm ls *)",
       "Bash(python3 *)",
       "Bash(npm run *)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(rm ../../.claude/settings.local.json)",
+      "Bash(git pull *)",
+      "Bash(curl -s https://api.github.com/repos/tuxi/dream-ai-apps/actions/runs?per_page=3)",
+      "Bash(curl -s 'https://api.github.com/repos/tuxi/dream-ai-apps/actions/runs?per_page=3')",
+      "Bash(brew install *)",
+      "Bash(docker build *)",
+      "Bash(curl -s \"https://api.github.com/repos/tuxi/dream-ai-apps/actions/workflows/deploy-site-web.yml/runs?per_page=1\")",
+      "Bash(curl -s \"https://api.github.com/repos/tuxi/dream-ai-apps/actions/runs/25246349106\")",
+      "Bash(curl -s \"https://api.github.com/repos/tuxi/dream-ai-apps/actions/runs/25246349106/jobs\")",
+      "Bash(curl -s http://localhost:3099/algorithm-disclosure)",
+      "Bash(curl -s http://localhost:3099/en/algorithm-disclosure)",
+      "Bash(kill %1)",
+      "Bash(wait)"
     ]
   }
 }

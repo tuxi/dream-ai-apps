@@ -54,6 +54,7 @@ export function SiteShell({
             <div className="flex gap-4">
               <Link href="/privacy">{t("footer.privacy")}</Link>
               <Link href="/terms">{t("footer.terms")}</Link>
+              <Link href="/algorithm-disclosure">{t("footer.algorithmDisclosure")}</Link>
               <Link href="/contact">{t("footer.contact")}</Link>
               <a href="https://github.com/tuxi" target="_blank" rel="noopener noreferrer">{t("footer.github")}</a>
             </div>

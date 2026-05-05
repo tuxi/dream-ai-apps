@@ -28,46 +28,16 @@ export default async function ContentPolicyPage() {
 
         <Section title="一、AI 服务商与生成能力">
           <p>
-            DreamAI 的 AI 生成功能由以下在中国境内完成备案的合规 AI 服务商提供能力支持。
-            用户通过本产品上传的文字描述、图片素材等输入内容，可能传输至对应服务商进行处理。
-            各服务商均按照中国法律法规要求完成算法备案，数据处理符合《个人信息保护法》《数据安全法》等法规要求。
+            本产品所使用的全部人工智能生成服务、算法备案信息、合规说明及运行机制，
+            已统一收录于《AI 算法服务公示》页面，包括各服务商的具体算法名称、备案编号、算法类型、
+            基本原理、运行机制、应用场景及合规声明等完整信息。
           </p>
-
-          <div className="mt-4 space-y-3">
-            {[
-              {
-                name: "DeepSeek（深度求索）",
-                capability: "文本生成模型",
-                model: "【模型名称占位 — 待补充】",
-                filing: "【备案号占位 — 待补充】",
-              },
-              {
-                name: "阿里云（通义系列）",
-                capability: "文本/图像生成模型",
-                model: "【模型名称占位 — 待补充】",
-                filing: "【备案号占位 — 待补充】",
-              },
-              {
-                name: "火山引擎（字节跳动）",
-                capability: "视频/图像生成模型",
-                model: "【模型名称占位 — 待补充】",
-                filing: "【备案号占位 — 待补充】",
-              },
-              {
-                name: "可灵 Kling（快手）",
-                capability: "视频生成模型",
-                model: "【模型名称占位 — 待补充】",
-                filing: "【备案号占位 — 待补充】",
-              },
-            ].map((provider) => (
-              <div key={provider.name} className="rounded-[1.25rem] bg-mist px-6 py-4">
-                <p className="font-semibold text-ink">
-                  {provider.name} — {provider.capability}
-                </p>
-                <p className="mt-1 text-slate-500">模型：{provider.model}</p>
-                <p className="text-slate-500">备案号：{provider.filing}</p>
-              </div>
-            ))}
+          <div className="mt-4 rounded-[1.25rem] bg-mist px-6 py-5">
+            <p className="text-slate-600">
+              请查阅：<a href="/algorithm-disclosure" className="text-accent underline underline-offset-2 hover:text-accent/80 transition">
+                AI 算法服务公示
+              </a>
+            </p>
           </div>
         </Section>
 
@@ -181,9 +151,15 @@ export default async function ContentPolicyPage() {
 
         <Section title="六、合规声明">
           <p>
-            本产品所使用的全部 AI 模型服务商（DeepSeek、阿里云通义系列、火山引擎、可灵 Kling）
-            均已按照《互联网信息服务算法推荐管理规定》《互联网信息服务深度合成管理规定》《生成式人工智能服务管理暂行办法》
-            等法律法规，在中国境内完成算法备案。
+            本产品所使用的全部 AI 模型服务商均已按照《互联网信息服务算法推荐管理规定》
+            《互联网信息服务深度合成管理规定》《生成式人工智能服务管理暂行办法》
+            等法律法规，在中国境内完成算法备案。各服务商的具体算法名称、备案编号、模型信息、
+            基本原理及运行机制等完整信息，详见《AI 算法服务公示》。
+          </p>
+          <p className="mt-3">
+            查阅链接：<a href="/algorithm-disclosure" className="text-accent underline underline-offset-2 hover:text-accent/80 transition">
+              AI 算法服务公示
+            </a>
           </p>
           <p className="mt-4">
             本政策将根据法律法规的更新和产品功能的调整适时修订。修订后的政策将在本页面发布，
