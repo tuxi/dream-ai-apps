@@ -59,7 +59,20 @@ export function SiteShell({
               <a href="https://github.com/tuxi" target="_blank" rel="noopener noreferrer">{t("footer.github")}</a>
             </div>
           </div>
-          <div className="mt-6 border-t border-line/50 pt-5 text-center">
+          <div className="mt-6 border-t border-line/50 pt-5 text-center text-xs text-slate-400 space-x-4">
+            <span>
+              {t("footer.reportPhone")}：<a href="tel:13439869084" className="transition hover:text-slate-600">13439869084</a>
+            </span>
+            <span>|</span>
+            <span>
+              {t("footer.reportEmail")}：<a href="mailto:support@dreamlog.com" className="transition hover:text-slate-600">support@dreamlog.com</a>
+            </span>
+            <span>|</span>
+            <span>
+              {t("footer.reportCenter")}：<a href="https://www.12377.cn" target="_blank" rel="noopener noreferrer" className="transition hover:text-slate-600">www.12377.cn</a>
+            </span>
+          </div>
+          <div className="pt-4 text-center">
             <a
               href="https://beian.miit.gov.cn/"
               target="_blank"
