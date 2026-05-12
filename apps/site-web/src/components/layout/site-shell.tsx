@@ -72,14 +72,22 @@ export function SiteShell({
               {t("footer.reportCenter")}：<a href="https://www.12377.cn" target="_blank" rel="noopener noreferrer" className="transition hover:text-slate-600">www.12377.cn</a>
             </span>
           </div>
-          <div className="pt-4 text-center">
+          <div className="pt-4 text-center text-xs text-slate-400 space-x-4">
             <a
               href="https://beian.miit.gov.cn/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-slate-400 transition hover:text-slate-600"
+              className="transition hover:text-slate-600"
             >
               {t("footer.icp")}
+            </a>
+            <a
+              href="https://beian.mps.gov.cn/#/query/webSearch"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-slate-600"
+            >
+              {t("footer.gongan")}
             </a>
           </div>
         </div>
