@@ -30,7 +30,7 @@ export default async function TermsPage() {
         <Section title="协议签订主体">
           <p>本协议由以下双方签订：</p>
           <div className="mt-4 rounded-[1.5rem] bg-mist px-6 py-5 space-y-2">
-            <p><strong>服务提供方：</strong>本应用开发者（个人，本站 ICP 备案主体）</p>
+            <p><strong>服务提供方：</strong>服务提供方：DreamAI 开发者（本站 ICP 备案主体）</p>
             <p><strong>服务使用方：</strong>注册或使用本服务、且具备完全民事行为能力的自然人、法人或其他组织</p>
             <p className="mt-3 text-xs text-slate-500">如您是未成年人，须在监护人的监督下使用，并由监护人代为接受本协议。</p>
           </div>
@@ -38,7 +38,7 @@ export default async function TermsPage() {
 
         <Section title="一、服务说明">
           <p>本协议依据《中华人民共和国民法典》《中华人民共和国网络安全法》《中华人民共和国个人信息保护法》《中华人民共和国电子商务法》等法律法规制定。</p>
-          <p className="mt-4">DreamAI 是由个人开发者开发并运营的 AI 视频生成工具，主要功能包括：</p>
+          <p className="mt-4">DreamAI 是由DreamAI 开发者（本站 ICP 备案主体）开发并运营的 AI 视频生成工具，主要功能包括：</p>
           <ul className="list-disc pl-5 space-y-2 mt-4">
             <li>文字生成视频（Text-to-Video）</li>
             <li>图片生成视频（Image-to-Video）</li>
@@ -57,7 +57,7 @@ export default async function TermsPage() {
 
         <Section title="二、用户资格">
           <ul className="list-disc pl-5 space-y-2">
-            <li>您须年满 <strong>17 周岁</strong>方可使用本服务（与 App Store 年龄分级一致）；</li>
+            <li>您须年满 <strong>13 周岁</strong>方可使用本服务（与 App Store 年龄分级一致）；</li>
             <li>如您是未成年人，须在监护人的监督下使用，并由监护人代为接受本协议；</li>
             <li>您须确保您提供的注册信息真实、准确、完整，并对您账号下的一切行为负责；</li>
             <li>您须遵守您所在国家或地区适用的法律法规。</li>
