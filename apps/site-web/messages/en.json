@@ -11,6 +11,7 @@
     "footer": {
       "privacy": "Privacy",
       "terms": "Terms",
+      "pricingTerms": "Paid Terms",
       "algorithmDisclosure": "Algorithm Disclosure",
       "contact": "Contact",
       "github": "GitHub",
@@ -498,6 +499,12 @@
       "title": "VII. Disclosure Updates and Contact Information",
       "p1": "This algorithm disclosure will be updated in a timely manner according to algorithm registration information, regulatory requirements, and algorithm optimization. Updates will be prominently displayed within the App to ensure users are promptly informed. Content identification standards will be updated concurrently to meet the latest regulatory requirements.",
       "p2": "If users have questions, suggestions, or complaints regarding this algorithm disclosure, please contact us at: support@dreamlog.com"
+    }
+  },
+  "PricingTerms": {
+    "metadata": {
+      "title": "Paid Service Agreement | DreamAI",
+      "description": "DreamAI Paid Service Agreement — including auto-renewal service rules. Please read carefully before using paid services."
     }
   }
 }

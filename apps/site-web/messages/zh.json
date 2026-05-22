@@ -11,6 +11,7 @@
     "footer": {
       "privacy": "Privacy",
       "terms": "Terms",
+      "pricingTerms": "付费协议",
       "algorithmDisclosure": "算法公示",
       "contact": "Contact",
       "github": "GitHub",
@@ -498,6 +499,12 @@
       "title": "七、公示更新与联系方式",
       "p1": "本算法公示将根据算法备案信息、监管要求及算法优化情况及时更新，更新后将在本App显著位置公示，确保用户及时了解相关信息；同时同步更新生成内容标识相关规范，符合最新监管要求。",
       "p2": "若用户对本算法公示内容有疑问、建议或投诉举报，可通过以下真实有效联系方式联系我们（确保监管检查可正常接通/接收）：support@dreamlog.com"
+    }
+  },
+  "PricingTerms": {
+    "metadata": {
+      "title": "付费服务协议 | DreamAI",
+      "description": "DreamAI 付费服务协议 — 含自动续费服务规则，请在使用付费服务前仔细阅读。"
     }
   }
 }
