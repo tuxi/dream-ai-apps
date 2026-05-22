@@ -57,7 +57,7 @@ export default async function PrivacyPage() {
           </SubSection>
 
           <SubSection title="1.3 我们不收集的信息">
-            <p>我们不会收集您的位置信息、通讯录、相机或麦克风权限（除非您在具体功能中主动授权），也不会收集与服务无关的任何个人信息。</p>
+            <p>我们不会在未经授权的情况下访问您的位置信息、通讯录、相机或麦克风等权限。</p>
           </SubSection>
         </Section>
 
@@ -160,14 +160,14 @@ export default async function PrivacyPage() {
         </Section>
 
         <Section title="八、未成年人保护">
-          <p>本服务面向 17 岁及以上用户。我们不会故意收集 17 岁以下未成年人的个人信息。如果您是未成年人的监护人，并发现其使用了本服务，请通过 <strong>support@dreamlog.com</strong> 联系我们，我们将及时删除相关信息。</p>
+          <p>本服务面向 13 岁及以上用户。我们不会故意收集 13 岁以下未成年人的个人信息。如果您是未成年人的监护人，并发现其使用了本服务，请通过 <strong>support@dreamlog.com</strong> 联系我们，我们将及时删除相关信息。</p>
         </Section>
 
         <Section title="九、Cookie 与追踪技术">
           <p>本应用为原生 iOS 应用，不使用 Cookie。官网（dreamlog.com）可能使用以下技术：</p>
           <ul className="list-disc pl-5 space-y-2 mt-4">
             <li>必要性 Cookie：用于维持您的登录状态和基本功能；</li>
-            <li>分析工具：用于统计页面访问量和用户行为（如 Google Analytics），数据经匿名化处理。</li>
+            <li>分析工具：用于统计页面访问量和用户行为，数据经匿名化处理。</li>
           </ul>
           <p className="mt-4">您可以通过浏览器设置拒绝非必要 Cookie，但这可能影响官网部分功能的正常使用。</p>
         </Section>
