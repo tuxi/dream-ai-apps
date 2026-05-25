@@ -99,14 +99,47 @@ export default async function PrivacyPage() {
           </SubSection>
           <SubSection title="3.3 第三方 AI 服务商">
             <p>本产品的 AI 生成功能由以下已在中国境内完成备案的合规 AI 服务商提供能力支持：</p>
+
             <ul className="list-disc pl-5 space-y-2 mt-3">
               <li>DeepSeek（深度求索）— 文本生成模型；</li>
               <li>阿里云（通义系列）— 文本/图像生成模型；</li>
               <li>火山引擎（字节跳动）— 视频/图像生成模型；</li>
               <li>可灵 Kling（快手）— 视频生成模型。</li>
             </ul>
-            <p className="mt-3">您在使用 AI 生成功能时输入的文字描述、上传的图片素材等内容可能传输至上述服务商进行处理，以完成您指定的生成任务。各服务商均按照中国法律法规完成算法备案，数据处理符合《个人信息保护法》《数据安全法》等法规要求。我们与各服务商的合作协议中均包含数据处理条款，确保您的数据仅用于完成生成任务，不得用于其自身模型的训练或改进。</p>
+            <p className="mt-3">
+              您在使用 AI 生成功能时输入的文字描述、上传的图片、视频、音频等素材，可能会传输至上述第三方 AI 服务商进行处理，以完成您主动发起的 AI 生成、分析或编辑任务。
+            </p>
+            <p className="mt-3">
+              在您首次使用相关 AI 功能前，DreamAI 会向您展示 AI 数据处理说明，并在获得您的明确同意后，才会上传相关素材或调用第三方 AI 服务。
+            </p>
+
+            <p className="mt-3">
+              关于 AI 数据处理、素材存储、第三方处理及数据保留期限的更多说明，请参阅：
+              <a
+                href="https://dreamlog.com/ai-data-processing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline ml-1"
+              >
+                《AI 数据处理说明》
+              </a>
+            </p>
           </SubSection>
+          <SubSection title="3.4 人脸与生物特征信息说明">
+            <p>
+              DreamAI 不提供人脸识别、身份验证、生物特征识别或 AI 换脸功能。
+            </p>
+            <p className="mt-3">
+              用户上传的图片、视频等素材中可能包含人脸、人体、声音或其他个人信息，但这些内容仅会在完成用户主动发起的 AI 图片、视频生成或编辑任务所必需的范围内进行处理。
+            </p>
+            <p className="mt-3">
+              DreamAI 不会提取、分析、识别或存储任何生物特征模板、面部特征点、身份特征信息或用于身份识别的数据。
+            </p>
+            <p className="mt-3">
+              如用户上传的素材包含人脸或人物形象，相关内容可能会根据用户发起的 AI 生成任务，被发送至第三方 AI 服务提供商进行处理，但仅用于完成当前任务，不会用于身份识别、用户画像或未经授权的模型训练。
+            </p>
+          </SubSection>
+
         </Section>
 
         <Section title="四、信息的共享与披露">

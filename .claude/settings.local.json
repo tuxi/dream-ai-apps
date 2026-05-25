@@ -47,7 +47,14 @@
       "Bash(curl -s http://localhost:3099/algorithm-disclosure)",
       "Bash(curl -s http://localhost:3099/en/algorithm-disclosure)",
       "Bash(kill %1)",
-      "Bash(wait)"
+      "Bash(wait)",
+      "Bash(npx tsc *)",
+      "Bash(./node_modules/.bin/tsc --noEmit --pretty)",
+      "Bash(git push *)",
+      "Bash(git -C /Users/xiaoyuan/Documents/work/git/dream-ai-apps add apps/site-web/src/app/pricing-terms/page.tsx apps/site-web/messages/en.json apps/site-web/messages/zh.json apps/site-web/src/components/layout/site-shell.tsx)",
+      "Bash(git -C /Users/xiaoyuan/Documents/work/git/dream-ai-apps commit -m ' *)",
+      "Bash(git -C /Users/xiaoyuan/Documents/work/git/dream-ai-apps push)",
+      "Bash(git -C /Users/xiaoyuan/Documents/work/git/dream-ai-apps add apps/site-web/src/app/ai-data-processing/page.tsx)"
     ]
   }
 }
